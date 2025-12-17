@@ -1,0 +1,11 @@
+name: ic-marketing-site
+services:
+  - environment_slug: php
+    name: web
+    build_command: composer install --no-interaction --prefer-dist --optimize-autoloader && npm install && npm run build
+    run_command: heroku-php-apache2 public/
+    envs:
+      - key: APP_KEY
+        value: base64:J/Erb8JZ6YV3b+PSjcTwyLsdVewMlniTuFlXemH5Lzo=
+    http_port: 8080
+    source_dir: /
