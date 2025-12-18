@@ -1,5 +1,5 @@
 <x-layout title='About us'>
-  <div class="flex bg-teal-700 h-[400px] flex-col gap-12 my-auto justify-center items-center w-full bg-repeat-y" style="background-image: url('{{ Vite::asset('resources/images/side-pixel-bg.png') }}')">
+  <div class="flex bg-teal-700 h-[400px] flex-col gap-12 my-auto justify-center items-center w-full bg-repeat-y" style="background-image: url('/images/side-pixel-bg.png')">
     <div class="w-full max-w-screen-xl mx-auto py-8 flex flex-col">
       <div class="flex flex-col gap-6 w-4/5 mx-auto text-center">
         <h2 class="text-4xl text-white">Workplace well-being is a standard, not a perk</h2>
@@ -11,25 +11,25 @@
     <div class="w-full max-w-screen-xl mx-auto py-8 flex flex-col">
       <div class="flex gap-6 md:flex-row flex-col w-full mx-auto px-4 md:px-0">
         <div class="md:w-3/10 w-full md:flex justify-center items-center">
-          <img src="{{ Vite::asset('resources/images/employee-frustrated.png') }}" alt="Employee Frustrated" height="428px"/>
+          <img src="/images/employee-frustrated.png" alt="Employee Frustrated" height="428px"/>
         </div>
         <div class="flex flex-col gap-8 md:w-7/10 w-full justify-center items-start">
           <h3 class="text-3xl text-black-900 font-semibold mb-4">We help carry the unseen weight of organizational health</h3>
           <ul class="flex flex-col gap-4">
             <li class="rounded-md p-4 bg-gray-100 text-sm h-20 md:h-16 flex gap-2 items-center">
-              <img src="{{ Vite::asset('resources/images/target.png') }}" alt="Target Icon"/>
+              <img src="/images/target.png" alt="Target Icon"/>
               <p class="flex">How do you make programs that actually solve presenteeism or absenteeism?</p>
             </li>
             <li class="rounded-md p-4 bg-gray-100 text-sm h-20 md:h-16 flex gap-2 items-center">
-              <img src="{{ Vite::asset('resources/images/flying-money.png') }}" alt="Target Icon"/>
+              <img src="/images/flying-money.png" alt="Target Icon"/>
               <p class="flex">How do you manage rising HMO &amp; EAP costs when employees are still burned out or quiet cracking?</p>
             </li>
             <li class="rounded-md p-4 bg-gray-100 text-sm h-20 md:h-16 flex gap-2 items-center">
-              <img src="{{ Vite::asset('resources/images/employee-asking.png') }}" alt="Target Icon"/>
+              <img src="/images/employee-asking.png" alt="Target Icon"/>
               <p class="flex">How do you meet employees&apos; growing expectations for wellbeing support with a stretched HR team?</p>
             </li>
             <li class="rounded-md p-4 bg-gray-100 text-sm h-20 md:h-16 flex gap-2 items-center">
-              <img src="{{ Vite::asset('resources/images/refresh.png') }}" alt="Target Icon"/>
+              <img src="/images/refresh.png" alt="Target Icon"/>
               <p class="flex">How do you reduce costly attrition, even when you&apos;ve already made improvements?</p>
             </li>
           </ul>
@@ -47,8 +47,8 @@
       <div class="w-full max-w-screen-xl mx-auto py-8 flex flex-col gap-8 px-4 md:px-0 mb-12">
         <h4 class='text-md font-semibold'>Uniquely, Infinite Care offers support at all points on the continuum:</h4>
         <div class="flex flex-col gap-8 justify-center items-center w-full">
-          <img src='{{ Vite::asset('resources/images/meter.png') }}' alt="Mental Health Continuum Graphic"/>
-          <img src='{{ Vite::asset('resources/images/interventions.png') }}' alt="Mental Health Continuum Graphic"/>
+          <img src='/images/meter.png' alt="Mental Health Continuum Graphic"/>
+          <img src='/images/interventions.png' alt="Mental Health Continuum Graphic"/>
         </div>
       </div>
     </div>

@@ -21,11 +21,11 @@
           <h3 class="text-4xl text-white">Build a thriving workforce with holistic employee well-being programs beyond HMO</h3>
           <div class="flex flex-col items-center w-64 relative">
             <a href="{{ route('booking') }}"><button class="cursor-pointer h-12 font-semibold text-sm w-64 bg-white border-transparent rounded-lg px-4 py-2 text-teal-500">Book a Discovery Call</button></a>
-            <img src="{{ Vite::asset('resources/images/pixels.png') }}" alt="pixels" class="absolute top-full"/>
+            <img src="/images/pixels.png" alt="pixels" class="absolute top-full"/>
           </div>
         </div>
         <div class="hidden md:flex md:items-center md:justify-center md:w-1/2 py-12">
-          <img src="{{ Vite::asset('resources/images/hero-header-for-workforce-culture.png') }}" alt="hero header image" class="h-[400px] w-auto object-contain"/>
+          <img src="/images/hero-header-for-workforce-culture.png" alt="hero header image" class="h-[400px] w-auto object-contain"/>
         </div>
       </div>
     </div>
@@ -34,7 +34,7 @@
       <div class="w-full bg-white h-auto">
         <div class="flex mx-auto px-8 md:px-0 lg:px-8 gap-4 my-auto max-w-screen-xl">
           <div class="w-full hidden md:flex items-center justify-center">
-            <img src="{{ Vite::asset('resources/images/wellness-psychological-safety.png') }}" alt="Wellness and Psychological Safety"/>
+            <img src="/images/wellness-psychological-safety.png" alt="Wellness and Psychological Safety"/>
           </div>
           <div class="w-full flex flex-col gap-4">
             <h3 class="font-semibold text-3xl text-gray-800 mb-4">Get all-in-one platform for physical wellness, psychological safety, and more</h3>
@@ -159,7 +159,7 @@
             </div>
           </div>
           <div class="w-full md:w-3/5 hidden md:flex items-center justify-center">
-            <img src="{{ Vite::asset('resources/images/workplace-well-being-company-data.png') }}" alt="Workplace well-being company data"/>
+            <img src="/images/workplace-well-being-company-data.png" alt="Workplace well-being company data"/>
           </div>
         </div>
       </div>
@@ -167,7 +167,7 @@
       <div class="w-full bg-white h-auto">
         <div class="flex mx-auto gap-4 my-auto max-w-screen-xl xl:px-0 px-8 md:px-0 lg:px-8">
           <div class="w-full md:w-3/5 hidden md:flex items-center justify-center">
-            <img src="{{ Vite::asset('resources/images/access.png') }}" alt="Access expert-led programs and workshops"/>
+            <img src="/images/access.png" alt="Access expert-led programs and workshops"/>
           </div>
           <div class="w-full md:w-2/5 flex flex-col gap-4">
             <h3 class="font-semibold text-3xl text-gray-800 mb-4">Access expert-led programs and workshops &mdash; both for employees and leaders</h3>

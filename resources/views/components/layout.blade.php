@@ -31,7 +31,7 @@
 
           <!-- Logo -->
           <a href="{{ route('home') }}" class="flex items-center">
-            <img src="{{ Vite::asset('resources/images/logo.png') }}" height="39px" width="129px" alt="InfinitCare Logo" class="cursor-pointer w-auto"/>
+            <img src="/images/logo.png" height="39px" width="129px" alt="InfinitCare Logo" class="cursor-pointer w-auto"/>
           </a>
         </div>
 
