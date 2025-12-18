@@ -38,19 +38,19 @@
         <!-- Desktop menu (hidden on mobile) -->
         <div class="hidden md:flex items-center space-x-12">
           <div class="hidden md:flex space-x-12">
-            <a href="{{ route('home') }}"
+            <a wire:navigate href="{{ route('home') }}"
               @class([
                 'text-gray-600 hover:text-gray-800 text-sm active:text-teal-700 active:font-bold',
                 'text-teal-700 font-bold' => request()->is('/'),
               ])
             >Home</a>
-            <a href="{{ route('about-us') }}"
+            <a wire:navigate href="{{ route('about-us') }}"
               @class([
                 'text-gray-600 hover:text-gray-800 text-sm active:text-teal-700 active:font-bold',
                 'text-teal-700 font-bold' => request()->is('about-us'),
               ])
             >About us</a>
-            <a href="{{ route('resources') }}"
+            <a wire:navigate href="{{ route('resources') }}"
               @class([
                 'text-gray-600 hover:text-gray-800 text-sm active:text-teal-700 active:font-bold',
                 'text-teal-700 font-bold' => request()->is('resources*'),
@@ -62,7 +62,7 @@
                 Member Login
               </button>
             </a>
-            <a href="{{ route('booking') }}">
+            <a wire:navigate href="{{ route('booking') }}">
               <button class="cursor-pointer border-2 font-semibold border-teal-700 rounded-lg px-4 py-2 text-teal-600 bg-teal-700 text-white transition cursor-pointer text-sm">
                 Book a Discovery Call
               </button>
