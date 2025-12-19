@@ -17,10 +17,13 @@
     <!-- Hero Section  -->
     <div class="w-full bg-teal-700 h-auto flex items-center overflow-clip">
       <div class="flex space-x-4 max-w-screen-xl mx-auto py-0 w-full xl:px-0 lg:px-8 px-8 md:px-0">
-        <div class="w-full md:w-1/2 xs:p-8 flex flex-col space-y-6 py-52 pt-8 md:pt-24">
+        <div class="w-full md:w-1/2 xs:p-8 flex flex-col space-y-6 py-52 pt-8 md:pt-24 text-center md:text-left">
           <h3 class="text-4xl text-white">Build a thriving workforce with holistic employee well-being programs beyond HMO</h3>
-          <div class="flex flex-col items-center w-64 relative">
+          <div class="flex flex-col items-center w-64 relative text-center mx-auto md:mx-0">
             <a href="{{ route('booking') }}"><button class="cursor-pointer h-12 font-semibold text-sm w-64 bg-white border-transparent rounded-lg px-4 py-2 text-teal-500">Book a Discovery Call</button></a>
+            <div class="md:flex md:items-center md:justify-center md:w-1/2 pt-8 md:hidden">
+              <img src="/images/hero-header-for-workforce-culture.png" alt="hero header image" class="w-auto object-contain"/>
+            </div>
             <img src="/images/pixels.png" alt="pixels" class="absolute top-full"/>
           </div>
         </div>
@@ -32,8 +35,8 @@
     <div class="flex flex-col gap-12 md:gap-48 justify-between items-center w-full">
       <!-- Features Section 1 -->
       <div class="w-full bg-white h-auto">
-        <div class="flex mx-auto px-8 md:px-0 lg:px-8 gap-4 my-auto max-w-screen-xl">
-          <div class="w-full hidden md:flex items-center justify-center">
+        <div class="flex mx-auto md:flex-row flex-col-reverse flex-col px-8 md:px-0 lg:px-8 gap-4 my-auto max-w-screen-xl">
+          <div class="w-full md:flex items-center justify-center">
             <img src="/images/wellness-psychological-safety.png" alt="Wellness and Psychological Safety"/>
           </div>
           <div class="w-full flex flex-col gap-4">
@@ -121,7 +124,7 @@
       </div>
       <!-- Features Section 2 -->
       <div class="w-full bg-white h-auto">
-        <div class="flex mx-auto gap-4 my-auto max-w-screen-xl xl:px-0 px-8 md:px-0 lg:px-8">
+        <div class="flex mx-auto md:flex-row flex-col gap-4 my-auto max-w-screen-xl xl:px-0 px-8 md:px-0 lg:px-8">
           <div class="w-full md:w-2/5 flex flex-col gap-8">
             <h3 class="font-semibold text-3xl text-gray-800 mb-4">Design workplace well-being initiatives based on real-time company data</h3>
             <div class="bg-gray-50 w-full rounded-lg border border-gray-200 p-6 my-2 flex flex-col space-y-4 overflow-visible">
@@ -158,15 +161,15 @@
               <p class="mt-2">And more &hellip;</p>
             </div>
           </div>
-          <div class="w-full md:w-3/5 hidden md:flex items-center justify-center">
+          <div class="w-full md:w-3/5 md:flex items-center justify-center">
             <img src="/images/workplace-well-being-company-data.png" alt="Workplace well-being company data"/>
           </div>
         </div>
       </div>
       <!-- Features Section 3 -->
       <div class="w-full bg-white h-auto">
-        <div class="flex mx-auto gap-4 my-auto max-w-screen-xl xl:px-0 px-8 md:px-0 lg:px-8">
-          <div class="w-full md:w-3/5 hidden md:flex items-center justify-center">
+        <div class="flex mx-auto md:flex-row flex-col-reverse flex-col gap-4 my-auto max-w-screen-xl xl:px-0 px-8 md:px-0 lg:px-8">
+          <div class="w-full md:w-3/5 md:flex items-center justify-center">
             <img src="/images/access.png" alt="Access expert-led programs and workshops"/>
           </div>
           <div class="w-full md:w-2/5 flex flex-col gap-4">
@@ -211,23 +214,22 @@
       <div class="w-full bg-white h-auto mb-8">
         <div class="flex flex-col mx-auto gap-8 my-auto max-w-screen-xl xl:px-0 px-8 md:px-0 lg:px-8">
           <h3 class="text-3xl font-semibold">Be guided at every step in building your employee well-being program:</h3>
-          <ul class="flex flex-wrap items-stretch mx-auto gap-4 my-auto max-w-screen-xl px-0">
-            <li class="flex flex-col items-start justify-between flex-1 min-w-[160px] min-h-[200px] md:min-h-[244px] h-full bg-white rounded-lg border border-gray-200 p-4 gap-2 text-left hover:shadow-sm transition">
-              <div class="flex flex-col gap-4">
+          <ul class="flex flex-wrap flex-col md:flex-row items-stretch mx-auto gap-4 my-auto max-w-screen-xl px-0">
+            <li class="flex flex-row md:flex-col flex-row-reverse items-start justify-between flex-1 min-w-[160px] md:min-h-[244px] h-full bg-white rounded-lg border border-gray-200 p-4 gap-2 text-left hover:shadow-sm transition">
+              <div class="flex md:flex-col flex-row-reverse gap-4">
                 <svg class="w-12 h-12" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path opacity="0.4" d="M10.5 12C10.5 11.175 11.175 10.5 12 10.5H48C48.825 10.5 49.5 11.175 49.5 12V25.6031C44.4094 26.3344 40.5 30.7125 40.5 36C40.5 30.1969 35.8031 25.5 30 25.5C24.1969 25.5 19.5 30.1969 19.5 36C19.5 30.7125 15.5906 26.3344 10.5 25.6031V12Z" fill="#0F766E"/>
                   <path d="M12 45C15.3094 45 18 47.6906 18 51C18 52.6594 16.6594 54 15 54H3C1.34062 54 0 52.6594 0 51C0 47.6906 2.69063 45 6 45H12ZM33 45C36.3094 45 39 47.6906 39 51C39 52.6594 37.6594 54 36 54H24C22.3406 54 21 52.6594 21 51C21 47.6906 23.6906 45 27 45H33ZM54 45C57.3094 45 60 47.6906 60 51C60 52.6594 58.6594 54 57 54H45C43.3406 54 42 52.6594 42 51C42 47.6906 44.6906 45 48 45H54ZM9 42C5.69063 42 3 39.3094 3 36C3 32.6906 5.69063 30 9 30C12.3094 30 15 32.6906 15 36C15 39.3094 12.3094 42 9 42ZM30 42C26.6906 42 24 39.3094 24 36C24 32.6906 26.6906 30 30 30C33.3094 30 36 32.6906 36 36C36 39.3094 33.3094 42 30 42ZM51 42C47.6906 42 45 39.3094 45 36C45 32.6906 47.6906 30 51 30C54.3094 30 57 32.6906 57 36C57 39.3094 54.3094 42 51 42ZM48 6C51.3094 6 54 8.69063 54 12V25.9406C53.0531 25.6594 52.0406 25.5 51 25.5C50.4938 25.5 49.9875 25.5375 49.5 25.6031V12C49.5 11.175 48.825 10.5 48 10.5H12C11.175 10.5 10.5 11.175 10.5 12V25.6031C10.0125 25.5375 9.50625 25.5 9 25.5C7.95937 25.5 6.94688 25.65 6 25.9406V12C6 8.69063 8.69063 6 12 6H48Z" fill="#0F766E"/>
                 </svg>
-                <div class="text-teal-800 text-md font-bold mt-2">Onboarding &amp; Employee Orientation</div>
+                <div class="text-teal-800 text-sm md:text-md font-bold mt-2">Onboarding &amp; Employee Orientation</div>
               </div>
               <svg class="self-start" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use href="#icon-circle-bg-40"></use>
                 <path d="M18.499 25V13.678H16.408V10.975H21.253V25H18.499Z" fill="#0F766E"/>
               </svg>
-
             </li>
 
-            <li class="flex flex-col items-start justify-between flex-1 min-w-[160px] min-h-[200px] min-h-[244px] h-full bg-white rounded-lg border border-gray-200 p-4 gap-2 text-left hover:shadow-sm transition">
+            <li class="flex flex-row md:flex-col flex-row-reverse items-start justify-between flex-1 min-w-[160px] min-h-[200px] min-h-[244px] h-full bg-white rounded-lg border border-gray-200 p-4 gap-2 text-left hover:shadow-sm transition">
               <div class="flex flex-col gap-4">
                 <svg class="w-12 h-12" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path opacity="0.4" d="M11.8867 23.1749L47.9992 12.853V47.1374L35.8398 43.6687C35.0617 47.8405 31.3961 50.9999 26.9992 50.9999C22.0305 50.9999 17.9992 46.9687 17.9992 41.9999C17.9992 40.8562 18.2148 39.7499 18.6086 38.7468L11.8867 36.8249C11.9617 36.5624 11.9992 36.2812 11.9992 35.9999V23.9999C11.9992 23.7187 11.9617 23.4374 11.8867 23.1749ZM22.4992 41.9999C22.4992 44.4843 24.5148 46.4999 26.9992 46.4999C29.343 46.4999 31.2648 44.7093 31.4805 42.4218L22.968 39.9937C22.668 40.5937 22.4992 41.278 22.4992 41.9999Z" fill="#0F766E"/>
@@ -241,7 +243,7 @@
               </svg>
             </li>
 
-            <li class="flex flex-col items-start justify-between flex-1 min-w-[160px] min-h-[200px] min-h-[244px] h-full bg-white rounded-lg border border-gray-200 p-4 gap-2 text-left hover:shadow-sm transition">
+            <li class="flex flex-row md:flex-col flex-row-reverse items-start justify-between flex-1 min-w-[160px] min-h-[200px] min-h-[244px] h-full bg-white rounded-lg border border-gray-200 p-4 gap-2 text-left hover:shadow-sm transition">
               <div class="flex flex-col gap-4">
                 <svg class="w-12 h-12" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path opacity="0.4" d="M3 24C3 28.8 4.875 33.1594 7.94062 36.3844C9.4875 38.0156 10.8656 39.9094 11.5406 42H25.5V37.5C25.5 32.5312 29.5312 28.5 34.5 28.5H38.4375C38.8031 27.0656 39 25.5562 39 24C39 14.0625 30.9375 6 21 6C11.0625 6 3 14.0625 3 24ZM9 23.25C9 17.0344 14.0344 12 20.25 12C21.4969 12 22.5 13.0031 22.5 14.25C22.5 15.4969 21.4969 16.5 20.25 16.5C16.5188 16.5 13.5 19.5188 13.5 23.25C13.5 24.4969 12.4969 25.5 11.25 25.5C10.0031 25.5 9 24.4969 9 23.25ZM12 46.5V48C12 52.1437 15.3562 55.5 19.5 55.5H22.5C24.0938 55.5 25.575 55.0031 26.7937 54.15C25.9687 52.7906 25.5 51.1969 25.5 49.5V46.5H12Z" fill="#0F766E"/>
@@ -255,7 +257,7 @@
               </svg>
             </li>
 
-            <li class="flex flex-col items-start justify-between flex-1 min-w-[160px] min-h-[200px] min-h-[244px] bg-white rounded-lg border border-gray-200 p-4 gap-2 text-left hover:shadow-sm transition">
+            <li class="flex flex-row md:flex-col flex-row-reverse items-start justify-between flex-1 min-w-[160px] min-h-[200px] min-h-[244px] bg-white rounded-lg border border-gray-200 p-4 gap-2 text-left hover:shadow-sm transition">
               <div class="flex flex-col gap-4">
                 <svg class="w-12 h-12" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path opacity="0.4" d="M12 18V48C12 51.3094 14.6906 54 18 54H42C45.3094 54 48 51.3094 48 48V18H12ZM19.5 26.25C19.5 25.0031 20.5031 24 21.75 24H38.25C39.4969 24 40.5 25.0031 40.5 26.25C40.5 27.4969 39.4969 28.5 38.25 28.5H21.75C20.5031 28.5 19.5 27.4969 19.5 26.25ZM19.5 35.25C19.5 34.0031 20.5031 33 21.75 33H38.25C39.4969 33 40.5 34.0031 40.5 35.25C40.5 36.4969 39.4969 37.5 38.25 37.5H21.75C20.5031 37.5 19.5 36.4969 19.5 35.25ZM19.5 44.25C19.5 43.0031 20.5031 42 21.75 42H30.75C31.9969 42 33 43.0031 33 44.25C33 45.4969 31.9969 46.5 30.75 46.5H21.75C20.5031 46.5 19.5 45.4969 19.5 44.25Z" fill="#0F766E"/>
@@ -269,7 +271,7 @@
               </svg>
             </li>
 
-            <li class="flex flex-col items-start justify-between flex-1 min-w-[160px] min-h-[200px] min-h-[244px] bg-white rounded-lg border border-gray-200 p-4 gap-2 text-left hover:shadow-sm transition">
+            <li class="flex flex-row md:flex-col flex-row-reverse items-start justify-between flex-1 min-w-[160px] min-h-[200px] min-h-[244px] bg-white rounded-lg border border-gray-200 p-4 gap-2 text-left hover:shadow-sm transition">
               <div class="flex flex-col gap-4">
                 <svg class="w-12 h-12" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path opacity="0.4" d="M24 13.5C24 11.0156 26.0156 9 28.5 9H31.5C33.9844 9 36 11.0156 36 13.5V46.5C36 48.9844 33.9844 51 31.5 51H28.5C26.0156 51 24 48.9844 24 46.5V13.5Z" fill="#0F766E"/>
