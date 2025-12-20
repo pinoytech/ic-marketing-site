@@ -1,6 +1,11 @@
 <x-layout title='About us'>
-  <div class="flex bg-teal-700 h-[400px] flex-col gap-12 my-auto justify-center items-center w-full bg-repeat-y" style="background-image: url('/images/side-pixel-bg.png')">
-    <div class="w-full max-w-screen-xl mx-auto py-8 flex flex-col">
+  <div class="relative flex bg-teal-700 md:h-[400px] h-[500px] flex-col gap-12 my-auto justify-center items-center w-full">
+    <!-- Desktop background (left, vertical repeat) -->
+    <div class="hidden md:block absolute inset-0 z-0 pointer-events-none bg-top md:bg-left bg-auto bg-repeat-y" style="background-image: url('/images/side-pixel-bg.png'); background-position: top left;"></div>
+
+    <!-- Mobile background: single top image -->
+    <div class="block md:hidden absolute inset-x-0 top-0 z-0 pointer-events-none bg-top bg-no-repeat h-12" style="background-image: url('/images/top-pixel-bg.png'); background-position: top center; background-size: auto;"></div>
+    <div class="relative z-10 w-full max-w-screen-xl mx-auto py-8 flex flex-col">
       <div class="flex flex-col gap-6 w-4/5 mx-auto text-center">
         <h2 class="text-4xl text-white">Workplace well-being is a standard, not a perk</h2>
         <p class="text-white">Infinit Care helps companies improve employee engagement and productivity through holistic interventions. When well-being becomes part of your culture, people and performance thrive together.</p>
