@@ -39,8 +39,8 @@
           <div class="w-full md:flex items-center justify-center">
             <img src="/images/wellness-psychological-safety.png" alt="Wellness and Psychological Safety"/>
           </div>
-          <div class="w-full flex flex-col gap-4">
-            <h3 class="font-semibold text-3xl text-gray-800 mb-4">Get all-in-one platform for physical wellness, psychological safety, and more</h3>
+          <div class="w-full flex flex-col gap-8">
+            <h3 class="font-semibold text-xl md:text-3xl text-gray-800">Get all-in-one platform for physical wellness, psychological safety, and more</h3>
             <div>
               <div class="flex md:flex-row md:gap-4 flex-col justify-between">
                 <div class="bg-gray-50 w-full rounded-lg border border-gray-200 p-6 my-2 flex flex-col gap-4 overflow-visible">
@@ -126,7 +126,7 @@
       <div class="w-full bg-white h-auto">
         <div class="flex mx-auto md:flex-row flex-col gap-4 my-auto max-w-screen-xl xl:px-0 px-8 md:px-0 lg:px-8">
           <div class="w-full md:w-2/5 flex flex-col gap-8">
-            <h3 class="font-semibold text-3xl text-gray-800 mb-4">Design workplace well-being initiatives based on real-time company data</h3>
+            <h3 class="font-semibold text-xl md:text-3xl text-gray-800">Design workplace well-being initiatives based on real-time company data</h3>
             <div class="bg-gray-50 w-full rounded-lg border border-gray-200 p-6 my-2 flex flex-col space-y-4 overflow-visible">
               <ul class="flex flex-col space-y-3">
                 <li class="flex items-center gap-4 text-sm min-h-[32px]">
@@ -172,8 +172,8 @@
           <div class="w-full md:w-3/5 md:flex items-center justify-center">
             <img src="/images/access.png" alt="Access expert-led programs and workshops"/>
           </div>
-          <div class="w-full md:w-2/5 flex flex-col gap-4">
-            <h3 class="font-semibold text-3xl text-gray-800 mb-4">Access expert-led programs and workshops &mdash; both for employees and leaders</h3>
+          <div class="w-full md:w-2/5 flex flex-col gap-8">
+            <h3 class="font-semibold text-xl md:text-3xl text-gray-800">Access expert-led programs and workshops &mdash; both for employees and leaders</h3>
             <div class="bg-gray-50 w-full rounded-lg border border-gray-200 p-6 my-2 flex flex-col space-y-4 overflow-visible">
               <ul class="flex flex-col space-y-3">
                 <li class="flex items-center space-x-3 text-sm min-h-[32px]">
@@ -213,7 +213,7 @@
       <!-- Be guided at every step -->
       <div class="w-full bg-white h-auto mb-8">
         <div class="flex flex-col mx-auto gap-8 my-auto max-w-screen-xl xl:px-0 px-8 md:px-0 lg:px-8">
-          <h3 class="text-3xl font-semibold">Be guided at every step in building your employee well-being program:</h3>
+          <h3 class="text-xl md:text-3xl font-semibold">Be guided at every step in building your employee well-being program:</h3>
           <ul class="flex flex-wrap flex-col md:flex-row items-stretch mx-auto gap-4 my-auto max-w-screen-xl px-0">
             <li class="flex flex-row md:flex-col flex-row-reverse items-start justify-between flex-1 min-w-[160px] md:min-h-[244px] h-full bg-white rounded-lg border border-gray-200 p-4 gap-2 text-left hover:shadow-sm transition">
               <div class="flex md:flex-col flex-row-reverse gap-4 w-full">
