@@ -15,13 +15,13 @@
   </svg>
   <div class="flex flex-col gap-12 justify-between items-center w-full">
     <!-- Hero Section  -->
-    <div class="w-full bg-teal-700 h-auto flex items-center overflow-clip">
+    <div class="w-full bg-teal-700 md:h-auto flex items-center overflow-clip">
       <div class="flex space-x-4 max-w-screen-xl mx-auto py-0 w-full xl:px-0 lg:px-8 px-8 md:px-0">
         <div class="w-full md:w-1/2 xs:p-8 flex flex-col space-y-6 py-52 pt-8 md:pt-24 text-center md:text-left">
           <h3 class="text-4xl text-white">Build a thriving workforce with holistic employee well-being programs beyond HMO</h3>
           <div class="flex flex-col items-center w-64 relative text-center mx-auto md:mx-0">
             <a href="{{ route('booking') }}"><button class="cursor-pointer h-12 font-semibold text-sm w-64 bg-white border-transparent rounded-lg px-4 py-2 text-teal-500">Book a Discovery Call</button></a>
-            <div class="md:flex md:items-center md:justify-center md:w-1/2 pt-8 md:hidden">
+            <div class="md:flex md:items-center md:justify-center z-999 h-50 md:h-auto md:w-1/2 pt-8 md:hidden">
               <img src="/images/hero-header-for-workforce-culture.png" alt="hero header image" class="w-auto object-contain"/>
             </div>
             <img src="/images/pixels.png" alt="pixels" class="absolute top-full"/>
