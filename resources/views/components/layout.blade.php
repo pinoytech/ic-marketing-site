@@ -22,17 +22,17 @@
     <div class="max-w-screen-xl mx-auto">
       <div class="flex items-center justify-between h-16">
         <!-- Mobile hamburger (left) -->
-        <div class="flex items-center">
+        <div class="flex items-center justify-between w-full md:w-auto px-4 md:px-0">
+          <!-- Logo -->
+          <a href="{{ route('home') }}" class="flex items-center">
+            <img src="/images/logo.png" height="39px" width="129px" alt="InfinitCare Logo" class="cursor-pointer w-auto"/>
+          </a>
+
           <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 mr-3 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-500">
             <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
-
-          <!-- Logo -->
-          <a href="{{ route('home') }}" class="flex items-center">
-            <img src="/images/logo.png" height="39px" width="129px" alt="InfinitCare Logo" class="cursor-pointer w-auto"/>
-          </a>
         </div>
 
         <!-- Desktop menu (hidden on mobile) -->
@@ -81,7 +81,7 @@
       <div class="absolute left-0 top-0 bottom-0 w-3/4 max-w-xs bg-white p-6 overflow-auto">
         <div class="flex items-center justify-between">
           <a href="/" class="flex items-center">
-            <img src="/resources/images/logo.png" height="32" width="108" alt="InfinitCare Logo" class="w-auto"/>
+            <img src="/images/logo.png" height="32" width="108" alt="InfinitCare Logo" class="w-auto"/>
           </a>
           <button id="mobile-menu-close" class="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-500" aria-label="Close menu">
             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
