@@ -1,0 +1,43 @@
+{{-- resources/views/livewire/event-webinar-full.blade.php --}}
+<div class="flex flex-col gap-8 my-auto justify-center items-center w-full mb-8">
+  <div class="w-full max-w-screen-xl mx-auto px-4 md:px-0">
+    {{-- All events in a grid (3 per row) --}}
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      @foreach($events as $event)
+        <div wire:key="event-{{ $event->id }}" class="flex flex-col gap-4 rounded-xl text-left">
+          <div class="rounded-lg">
+            <img src="{{ $event->image }}" alt="{{ $event->title }}" class="w-full rounded-lg" loading="lazy" />
+          </div>
+          <div class="text-sm font-semibold flex flex-col md:items-center md:flex-row gap-4 justify-start">
+            @if(\Carbon\Carbon::parse($event->event_webinar_date)->isFuture())
+              <div>
+                <span class="text-white bg-teal-700 uppercase p-2 rounded-lg">Upcoming</span>
+              </div>
+            @endif
+            <span class="uppercase text-gray-500">{{ \Carbon\Carbon::parse($event->event_webinar_date)->format('F j, Y') }}</span>
+          </div>
+          <div class="text-sm font-semibold">{{ $event->title }}</div>
+          <div class="text-teal-500 text-xs">
+            @if(\Carbon\Carbon::parse($event->event_webinar_date)->isFuture() && $event->register_link)
+              <a href="{{ $event->register_link }}" class="hover:underline">Register</a>
+            @elseif(\Carbon\Carbon::parse($event->event_webinar_date)->isPast() && $event->watch_link)
+              <a href="{{ $event->watch_link }}" class="hover:underline">Watch Recording</a>
+            @endif
+          </div>
+        </div>
+      @endforeach
+    </div>
+
+    {{-- Load More Button --}}
+    @if($hasMore)
+      <div class="mt-8 flex justify-center">
+        <button 
+          wire:click="loadMore" 
+          class="h-12 cursor-pointer font-semibold text-sm px-8 bg-teal-700 hover:bg-teal-800 text-white border-transparent rounded-lg transition-colors"
+        >
+          Load more events & webinars
+        </button>
+      </div>
+    @endif
+  </div>
+</div>

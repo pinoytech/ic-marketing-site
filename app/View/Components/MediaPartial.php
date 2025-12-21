@@ -25,7 +25,7 @@ class MediaPartial extends Component
             [
                 'id' => 1,
                 'title' => 'InfinitCare Featured in HR Tech Weekly',
-                'date' => 'June 20, 2024',
+                'date' => date('F d, Y', strtotime('June 20, 2024')),
                 'image' => 'http://dummyimage.com/315x197.png/09f/fff',
                 'link' => 'https://hrtechweekly.com/infinitcare-featured-article',
             ],

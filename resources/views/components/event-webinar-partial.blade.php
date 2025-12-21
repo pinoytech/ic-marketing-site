@@ -7,7 +7,7 @@
   </div>
   <div class="w-full max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col md:flex-row gap-8">
     @foreach ($events as $event)
-      <div class="flex flex-col gap-4 w-full md:w-1/3 mx-auto rounded-xl text-left">
+      <div wire:key="event-{{ $event['id'] }}" class="flex flex-col gap-4 w-full md:w-1/3 mx-auto rounded-xl text-left">
         <div class="rounded-lg">
           <img src="{{ $event['image'] }}" class='w-full rounded-lg' />
         </div>

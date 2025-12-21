@@ -7,7 +7,7 @@
   </div>
   <div class="w-full max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col md:flex-row gap-8">
     @foreach ($media as $med)
-      <div class="flex flex-col gap-4 w-full md:w-1/3 mx-auto rounded-xl text-left">
+      <div wire:key="media-{{ $med['id'] }}" class="flex flex-col gap-4 w-full md:w-1/3 mx-auto rounded-xl text-left">
         <div class="rounded-lg bg-gray-500 h-48">
           <img src="{{ $med['image'] }}" class='w-full h-48 object-cover rounded-lg' />
         </div>
