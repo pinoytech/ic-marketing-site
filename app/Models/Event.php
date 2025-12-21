@@ -9,4 +9,14 @@ class Event extends Model
 {
     /** @use HasFactory<\Database\Factories\EventFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'event_webinar_date',
+        'image',
+        'status',
+        'register_link',
+        'watch_link',
+        'description',
+    ];
 }
