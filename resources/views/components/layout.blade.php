@@ -50,7 +50,7 @@
                 'text-teal-700 font-bold' => request()->is('about-us'),
               ])
             >About us</a>
-            <a wire:navigate href="{{ route('resources') }}"
+            <a wire:navigate href="{{ route('resources.index') }}"
               @class([
                 'text-gray-600 hover:text-gray-800 text-sm active:text-teal-700 active:font-bold',
                 'text-teal-700 font-bold' => request()->is('resources*'),
@@ -148,11 +148,11 @@
             </ul>
           </div>
           <div class="flex flex-col gap-4">
-            <p class="text-md font-semibold"><a href="{{ route('resources') }}">Resources</a></p>
+            <p class="text-md font-semibold"><a href="{{ route('resources.index') }}">Resources</a></p>
             <ul class="flex flex-col gap-2">
               <li class="text-sm"><a href="{{ route('resources.events-webinar') }}">Webinars &amp; Events</a></li>
-              <li class="text-sm"><a href="#">Blogs</a></li>
-              <li class="text-sm"><a href="#">Media</a></li>
+              <li class="text-sm"><a href="{{ route('resources.posts') }}">Blogs</a></li>
+              <li class="text-sm"><a href="{{ route('resources.media') }}">Media</a></li>
             </ul>
           </div>
           <div>

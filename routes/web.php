@@ -19,9 +19,20 @@ Route::get('/resources', function () {
     return view('resources.index');
 })->name('resources');
 
-Route::get('/resources/events-webinar', function () {
-    return view('resources.events-webinar');
-})->name('resources.events-webinar');
+Route::group(['prefix' => 'resources'], function () {
+    Route::get('/', function () {
+        return view('resources.index');
+    })->name('resources.index');
+    Route::get('/events-webinar', function () {
+        return view('resources.events-webinar');
+    })->name('resources.events-webinar');
+    Route::get('/posts', function () {
+        return view('resources.posts');
+    })->name('resources.posts');
+    Route::get('/media', function () {
+        return view('resources.media');
+    })->name('resources.media');
+});
 
 Route::get('/booking', function () {
     return view('booking');

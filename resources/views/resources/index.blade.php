@@ -1,4 +1,7 @@
-<x-layout title='About us'>
+<x-layout title='Resources - Infinite Care' :meta="[
+    'description' => 'Explore Infinite Care\'s comprehensive resources on mental health, wellness, and support services. Stay informed with our latest articles, events, and webinars.',
+    'keywords' => 'mental health resources, wellness articles, support services, mental health webinars, Infinite Care resources'
+]">
   <div class="flex flex-col gap-6 justify-between items-center w-full">
     <div class="flex flex-col gap-8 my-auto justify-center items-center w-full">
       <div class="w-full max-w-screen-xl mx-auto pt-8 px-4 md:px-0 md:pt-12 flex flex-col">

@@ -2,7 +2,7 @@
   <div class="w-full max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col">
     <div class="flex flex-row gap-4 justify-start items-center">
       <h2 class="text-2xl font-semibold text-center">Blogs</h2>
-      <a href="" class="text-xs text-teal-500 font-semibold hover:underline" target="_blank">See all &rarr;</a>
+      <a href="{{ route('resources.posts') }}" class="text-xs text-teal-500 font-semibold hover:underline">See all &rarr;</a>
     </div>
   </div>
   <div class="w-full max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col md:flex-row gap-8">
