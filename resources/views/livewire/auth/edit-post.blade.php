@@ -1,5 +1,5 @@
 <div>
-  <flux:modal name="edit-post" class="md:w-128">
+  <flux:modal name="edit-post" class="md:w-256" flyout>
       <div class="space-y-6">
           <div>
               <flux:heading size="lg">Update post</flux:heading>

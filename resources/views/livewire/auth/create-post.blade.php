@@ -1,6 +1,6 @@
 <div>
 
-  <flux:modal name="create-post" class="md:w-128">
+  <flux:modal name="create-post" class="md:w-256" flyout>
       <div class="space-y-6">
           <div>
               <flux:heading size="lg">Create post</flux:heading>
