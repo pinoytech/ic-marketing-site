@@ -1,9 +1,8 @@
 <div>
-
-  <flux:modal name="create-post" class="md:w-128">
+  <flux:modal name="edit-post" class="md:w-128">
       <div class="space-y-6">
           <div>
-              <flux:heading size="lg">Create post</flux:heading>
+              <flux:heading size="lg">Update post</flux:heading>
               <flux:text class="mt-2">Make changes to your post details.</flux:text>
           </div>
 
@@ -15,7 +14,7 @@
           <div class="flex">
               <flux:spacer />
 
-              <flux:button type="submit" variant="primary" wire:click="save">Save changes</flux:button>
+              <flux:button type="submit" variant="primary" wire:click="update">Save changes</flux:button>
           </div>
       </div>
   </flux:modal>

@@ -45,7 +45,7 @@ Route::view('dashboard', 'dashboard')
 
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
-    Route::get('posts', Posts::class)->name('posts');
+    Route::get('auth/posts', Posts::class)->name('posts');
 
     Route::get('settings/profile', Profile::class)->name('profile.edit');
     Route::get('settings/password', Password::class)->name('user-password.edit');
