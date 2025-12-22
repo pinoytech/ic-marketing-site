@@ -19,10 +19,11 @@ class PostFull extends Component
     public function render()
     {
         $posts = Post::orderBy('published_date', 'desc')
+            ->where('published_date', '<=', now())
             ->take($this->perPage)
             ->get();
 
-        $totalPosts = Post::count();
+        $totalPosts = Post::where('published_date', '<=', now())->count();
         $this->hasMore = $posts->count() < $totalPosts;
 
         return view('livewire.post-full', [
