@@ -290,7 +290,7 @@
     </div>
     <div class="w-full bg-white h-72 md:h-auto">
       <div class="flex items-center mx-auto flex-col gap-4 my-auto max-w-screen-xl xl:px-0 px-8 md:px-0 lg:px-8 h-full">
-        <div class="flex gap-8 md:gap-12 items-center justify-center bg-gray-50 bg-[url('/images/custom-background.png')] bg-center rounded-lg overflow-clip flex-col my-auto relative md:w-[800px]:h-52 lg:w-full h-72 px-8">
+        <div style="background-image: url('/images/custom-background.png');" class="flex gap-8 md:gap-12 items-center justify-center bg-gray-50 bg-[url('/images/custom-background.png')] bg-center rounded-lg overflow-clip flex-col my-auto relative md:w-[800px]:h-52 lg:w-full h-72 px-8">
           <h3 class="text-3xl font-semibold text-center">Want custom programs &amp; services? No problem!</h3>
           <div>
             <a href="{{ route('booking') }}">
