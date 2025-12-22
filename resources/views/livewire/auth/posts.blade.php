@@ -52,7 +52,7 @@
     </div>
     <livewire:auth.create-post />
     <livewire:auth.edit-post />
-    <flux:modal name="delete-post" class="min-w-[22rem]">
+    <flux:modal :name="'edit-post-'.$post->id" class="min-w-[22rem]">
       <div class="space-y-6">
           <div>
               <flux:heading size="lg">Delete post?</flux:heading>
