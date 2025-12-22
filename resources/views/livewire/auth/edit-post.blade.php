@@ -11,10 +11,10 @@
           <flux:input label="Author" wire:model='author' placeholder="Author name" />
           <flux:input label="Image URL" wire:model='image' placeholder="http://example.com/image.jpg" />
           <flux:input label="Published date" wire:model='published_date' type="date" />
-          <div class="flex">
-              <flux:spacer />
-
-              <flux:button type="submit" variant="primary" wire:click="update">Save changes</flux:button>
+          <div class="flex gap-4">
+            <flux:spacer />
+            <flux:button type="submit" variant="primary" wire:click="update">Save changes</flux:button>
+            <flux:button variant="outline" x-on:click="$flux.modal('edit-post').close()">Cancel</flux:button>
           </div>
       </div>
   </flux:modal>

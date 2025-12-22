@@ -52,7 +52,7 @@
     </div>
     <livewire:auth.create-post />
     <livewire:auth.edit-post />
-    <flux:modal :name="'edit-post-'.$post->id" class="min-w-[22rem]">
+    <flux:modal name="delete-post" class="min-w-[22rem]">
       <div class="space-y-6">
           <div>
               <flux:heading size="lg">Delete post?</flux:heading>
@@ -64,7 +64,7 @@
           <div class="flex gap-2">
               <flux:spacer />
               <flux:modal.close>
-                  <flux:button variant="ghost">Cancel</flux:button>
+                  <flux:button variant="ghost" x-on:click="$flux.modal('delete-post').close()">Cancel</flux:button>
               </flux:modal.close>
               <flux:button type="submit" variant="danger" wire:click="deletePost">Delete post</flux:button>
           </div>
