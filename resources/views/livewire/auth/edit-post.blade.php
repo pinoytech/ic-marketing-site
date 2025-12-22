@@ -13,8 +13,12 @@
           <flux:input label="Published date" wire:model='published_date' type="date" />
           <div class="flex gap-4">
             <flux:spacer />
-            <flux:button type="submit" variant="primary" wire:click="update">Save changes</flux:button>
-            <flux:button variant="outline" x-on:click="$flux.modal('edit-post').close()">Cancel</flux:button>
+            <flux:button type="submit" variant="primary" wire:click="update">
+              Save changes
+            </flux:button>
+            <flux:modal.close>
+              <flux:button variant="outline">Cancel</flux:button>
+            </flux:modal.close>
           </div>
       </div>
   </flux:modal>

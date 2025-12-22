@@ -39,7 +39,8 @@ class CreatePost extends Component
         ]);
 
         // Reset form fields
-        $this->reset(['title', 'content', 'author', 'image', 'published_date']);
+        // $this->reset(['title', 'content', 'author', 'image', 'published_date']);
+        $this->reset();
 
         Flux::modal('create-post')->close();
         session()->flash('message', 'Post created successfully.');
