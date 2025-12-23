@@ -50,8 +50,8 @@
         {{ $posts->links() }}
       </div>
     </div>
-    <livewire:auth.create-post />
-    <livewire:auth.edit-post />
+    <livewire:admin.posts.create-post />
+    <livewire:admin.posts.edit-post />
     <flux:modal name="delete-post" class="min-w-[22rem]">
       <div class="space-y-6">
           <div>

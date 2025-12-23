@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Auth;
+namespace App\Livewire\Admin\Posts;
 
 use App\Models\Post;
 use Flux\Flux;
@@ -17,7 +17,7 @@ class Posts extends Component
     {
         $posts = Post::orderBy('published_date', 'desc')->paginate(10);
 
-        return view('livewire.auth.posts', [
+        return view('livewire.admin.posts.posts', [
             'posts' => $posts,
         ]);
     }

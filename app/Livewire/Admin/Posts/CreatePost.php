@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Auth;
+namespace App\Livewire\Admin\Posts;
 
 use App\Models\Post;
 use Flux\Flux;
@@ -49,6 +49,6 @@ class CreatePost extends Component
 
     public function render()
     {
-        return view('livewire.auth.create-post');
+        return view('livewire.admin.posts.create-post');
     }
 }
