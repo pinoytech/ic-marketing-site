@@ -44,7 +44,7 @@ class CreatePost extends Component
 
         Flux::modal('create-post')->close();
         session()->flash('message', 'Post created successfully.');
-        $this->redirectRoute('posts', navigate: true);
+        $this->redirectRoute('admin/posts', navigate: true);
     }
 
     public function render()

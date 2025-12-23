@@ -48,7 +48,7 @@ class CreateEvent extends Component
 
         // Flux::modal('create-post')->close();
         // session()->flash('message', 'Post created successfully.');
-        // $this->redirectRoute('posts', navigate: true);
+        // $this->redirectRoute('events', navigate: true);
 
         $this->validate([
             'title' => 'required|string|max:255',
@@ -68,8 +68,9 @@ class CreateEvent extends Component
         ]);
 
         $this->reset();
-        $this->dispatch('modal-close', name: 'create-event');
+        Flux::modal('create-event')->close();
         session()->flash('message', 'Event created successfully!');
+        $this->redirectRoute('admin/events', navigate: true);
     }
 
     public function render()
