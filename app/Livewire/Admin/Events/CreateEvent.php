@@ -2,7 +2,7 @@
 
 namespace App\Livewire\Admin\Events;
 
-use App\Models\Post;
+use App\Models\Event;
 use Flux\Flux;
 use Livewire\Component;
 
