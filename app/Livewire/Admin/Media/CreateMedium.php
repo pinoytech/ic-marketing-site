@@ -1,26 +1,22 @@
 <?php
 
-namespace App\Livewire\Admin\Events;
+namespace App\Livewire\Admin\Media;
 
-use App\Models\Event;
+use App\Models\Media;
 use Flux\Flux;
 use Livewire\Component;
 
-class CreateEvent extends Component
+class CreateMedium extends Component
 {
     public $title;
 
-    public $event_webinar_date;
+    public $published_date;
 
     public $image;
 
-    public $status = 'upcoming';
+    public $content;
 
-    public $register_link;
-
-    public $watch_link;
-
-    public $description;
+    public $type;
 
     protected $rules = [
         'title' => 'required|string|max:255',
@@ -52,29 +48,28 @@ class CreateEvent extends Component
 
         $this->validate([
             'title' => 'required|string|max:255',
-            'event_webinar_date' => 'required|date',
+            'published_date' => 'required|date',
             'image' => 'required|string',
-            'status' => 'required|string',
+            'content' => 'required|string',
+            'type' => 'required|string',
         ]);
 
-        Event::create([
+        Media::create([
             'title' => $this->title,
-            'event_webinar_date' => $this->event_webinar_date,
+            'published_date' => $this->published_date,
             'image' => $this->image,
-            'status' => $this->status,
-            'register_link' => $this->register_link,
-            'watch_link' => $this->watch_link,
-            'description' => $this->description,
+            'content' => $this->content,
+            'type' => $this->type,
         ]);
 
         $this->reset();
-        Flux::modal('create-event')->close();
-        session()->flash('message', 'Event created successfully!');
-        $this->redirectRoute('admin.events', navigate: true);
+        Flux::modal('create-medium')->close();
+        session()->flash('message', 'Medium created successfully!');
+        $this->redirectRoute('admin.media', navigate: true);
     }
 
     public function render()
     {
-        return view('livewire.admin.events.create-event');
+        return view('livewire.admin.media.create-medium');
     }
 }

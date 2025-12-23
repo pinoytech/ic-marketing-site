@@ -62,7 +62,7 @@ class EditEvent extends Component
 
         Flux::modal('edit-event')->close();
         session()->flash('message', 'Event updated successfully.');
-        $this->redirectRoute('events', navigate: true);
+        $this->redirectRoute('admin.events', navigate: true);
     }
 
     public function render()

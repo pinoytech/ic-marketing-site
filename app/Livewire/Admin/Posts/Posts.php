@@ -38,6 +38,6 @@ class Posts extends Component
         Post::destroy($this->id);
         Flux::modal('delete-post')->close();
         session()->flash('message', 'Post deleted successfully.');
-        $this->redirectRoute('posts', navigate: true);
+        $this->redirectRoute('admin.posts', navigate: true);
     }
 }

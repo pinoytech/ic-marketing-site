@@ -38,6 +38,6 @@ class Events extends Component
         Event::destroy($this->id);
         Flux::modal('delete-event')->close();
         session()->flash('message', 'Event deleted successfully.');
-        $this->redirectRoute('events', navigate: true);
+        $this->redirectRoute('admin.events', navigate: true);
     }
 }

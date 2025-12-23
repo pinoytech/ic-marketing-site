@@ -58,7 +58,7 @@ class EditPost extends Component
 
         Flux::modal('edit-post')->close();
         session()->flash('message', 'Post updated successfully.');
-        $this->redirectRoute('posts', navigate: true);
+        $this->redirectRoute('admin.posts', navigate: true);
     }
 
     public function render()

@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Admin\Events\Events;
+use App\Livewire\Admin\Media\Media;
 use App\Livewire\Admin\Posts\Posts;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
@@ -46,8 +47,9 @@ Route::view('dashboard', 'dashboard')
 
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
-    Route::get('admin/posts', Posts::class)->name('posts');
-    Route::get('admin/events', Events::class)->name('events');
+    Route::get('admin/posts', Posts::class)->name('admin.posts');
+    Route::get('admin/events', Events::class)->name('admin.events');
+    Route::get('admin/media', Media::class)->name('admin.media');
 
     Route::get('settings/profile', Profile::class)->name('profile.edit');
     Route::get('settings/password', Password::class)->name('user-password.edit');
