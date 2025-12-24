@@ -57,6 +57,7 @@ class EditMedium extends Component
             'content' => $this->content,
             'image' => $this->image,
             'type' => $this->type,
+            'link' => $this->link,
             'published_date' => $this->published_date,
         ]);
 
