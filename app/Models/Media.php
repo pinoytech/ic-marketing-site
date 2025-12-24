@@ -15,6 +15,7 @@ class Media extends Model
         'content',
         'type',
         'published_date',
+        'link',
         'image',
     ];
 }
