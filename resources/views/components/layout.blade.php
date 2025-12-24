@@ -73,24 +73,24 @@
     </div>
 
     <!-- Mobile menu overlay -->
-    <div id="mobile-menu" aria-hidden="true" class="md:hidden fixed inset-0 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out">
+    <div id="mobile-menu" aria-hidden="true" class="md:hidden bg-icgreen-light fixed inset-0 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out">
       <!-- Backdrop -->
       <div id="mobile-menu-backdrop" class="absolute inset-0 bg-black/40" aria-hidden="true"></div>
 
       <!-- Sliding panel -->
-      <div class="absolute left-0 top-0 bottom-0 w-3/4 max-w-xs bg-white p-6 overflow-auto">
-        <div class="flex items-center justify-between">
+      <div class="bg-icgreen-light absolute left-0 top-0 bottom-0 w-full max-w-xs overflow-auto">
+        <div class="p-6 flex items-center justify-between bg-white">
           <a href="/" class="flex items-center">
             <img src="/images/logo.png" height="32" width="108" alt="InfinitCare Logo" class="w-auto"/>
           </a>
-          <button id="mobile-menu-close" class="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-500" aria-label="Close menu">
+          <button id="mobile-menu-close" class="p-2 rounded-md text-teal-700 hover:bg-gray-100" aria-label="Close menu">
             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
-        <nav class="mt-6 flex flex-col space-y-4">
+        <nav class="p-6 bg-icgreen-light mt-6 flex flex-col space-y-4">
           <a href="/" class="text-gray-600 hover:text-gray-800 text-base" @class(['text-teal-700 font-bold' => request()->is('/')]) >Home</a>
           <a href="/about-us" class="text-gray-600 hover:text-gray-800 text-base" @class(['text-teal-700 font-bold' => request()->is('about-us')])>About us</a>
           <a href="/resources" class="text-gray-600 hover:text-gray-800 text-base" @class(['text-teal-700 font-bold' => request()->is('resources')]) >Resources</a>

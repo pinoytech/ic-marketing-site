@@ -31,6 +31,8 @@
 
     --font-roboto-slab: 'Roboto Slab', serif;
     --font-spartan: 'Spartan', sans-serif;
+    --color-icgreen-light: #F0FDFA;
+    --color-icgreen-dark: #042F2E;
 }
 
 @layer theme {
