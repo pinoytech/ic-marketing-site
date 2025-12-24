@@ -14,6 +14,7 @@
               <flux:select.option>Video</flux:select.option>
           </flux:select>
           <flux:input label="Image URL" wire:model='image' placeholder="http://example.com/image.jpg" />
+          <flux:input label="Link URL" wire:model='link' placeholder="http://example.com/link" />
           <flux:input label="Published date" wire:model='published_date' type="date" />
           <div class="flex">
               <flux:spacer />

@@ -17,6 +17,8 @@ class EditMedium extends Component
 
     public $type;
 
+    public $link;
+
     public $image;
 
     public $published_date;
@@ -30,6 +32,7 @@ class EditMedium extends Component
         $this->title = $medium->title;
         $this->content = $medium->content;
         $this->image = $medium->image;
+        $this->link = $medium->link;
         $this->published_date = $medium->published_date;
         $this->type = $medium->type;
 
@@ -42,6 +45,7 @@ class EditMedium extends Component
             'title' => 'required|string|max:255',
             'content' => 'required|string',
             'image' => 'nullable|url',
+            'link' => 'nullable|url',
             'type' => 'required|string|max:50',
             'published_date' => 'required|date',
         ]);
