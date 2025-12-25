@@ -4,11 +4,15 @@ namespace App\Livewire\Admin\Posts;
 
 use App\Models\Post;
 use Flux\Flux;
+use Illuminate\Support\Facades\Storage;
 use Livewire\Attributes\On;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class EditPost extends Component
 {
+    use WithFileUploads;
+
     public $id;
 
     public $title;
@@ -21,6 +25,14 @@ class EditPost extends Component
 
     public $published_date;
 
+    public $resource_image;
+
+    public $resource_image_path;
+
+    // protected $rules = [
+    //     'resource_image' => 'image|max:1024', // max 1MB
+    // ];
+
     #[On('edit-post')]
     public function edit($id)
     {
@@ -31,6 +43,7 @@ class EditPost extends Component
         $this->content = $post->content;
         $this->author = $post->author;
         $this->image = $post->image;
+        $this->resource_image_path = $post->resource_image_path;
         $this->published_date = $post->published_date;
 
         Flux::modal('edit-post')->show();
@@ -38,15 +51,26 @@ class EditPost extends Component
 
     public function update()
     {
+        // dd($this->resource_image);
         $this->validate([
             'title' => 'required|string|max:255',
             'content' => 'required|string',
             'author' => 'required|string|max:255',
             'image' => 'nullable|url',
             'published_date' => 'required|date',
+            'resource_image' => 'nullable|image|max:1024',
         ]);
 
         $post = Post::find($this->id);
+
+        if ($this->resource_image) {
+            // Delete old image if it exists
+            if ($post->resource_image_path) {
+                Storage::disk('resource')->delete($post->resource_image_path);
+            }
+            $filename = time().'_'.$this->resource_image->getClientOriginalName();
+            $this->resource_image_path = $this->resource_image->storeAs('resource-images', $filename, 'resource');
+        }
 
         $post->update([
             'title' => $this->title,
@@ -54,6 +78,7 @@ class EditPost extends Component
             'author' => $this->author,
             'image' => $this->image,
             'published_date' => $this->published_date,
+            'resource_image_path' => $this->resource_image_path,
         ]);
 
         Flux::modal('edit-post')->close();
