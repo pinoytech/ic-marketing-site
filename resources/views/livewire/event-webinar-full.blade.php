@@ -28,19 +28,6 @@
       @endforeach
     </div>
 
-    {{-- Load More Button --}}
-    @if($hasMore)
-      <div class="mt-8 flex justify-center">
-        <button 
-          wire:click="loadMore" 
-          wire:loading.attr="disabled"
-          wire:loading.class="opacity-50"
-          class="h-12 cursor-pointer font-semibold text-sm px-8 bg-teal-700 hover:bg-teal-800 text-white border-transparent rounded-lg transition-colors"
-        >
-          <span wire:loading.remove wire:target="loadMore">Load more events &amp; webinars</span>
-          <span wire:loading wire:target="loadMore">Loading...</span>
-        </button>
-      </div>
-    @endif
+    @include('resources.partials.load-more', ['hasMore' => $hasMore, 'wireClick' => 'loadMore', 'label' => 'Load more'])
   </div>
 </div>
