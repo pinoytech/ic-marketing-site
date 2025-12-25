@@ -41,15 +41,15 @@
           @elseif ($this->resource_image_path)
             <img src="{{ Storage::disk('resource')->url($this->resource_image_path) }}" class="w-1/2" alt="Current photo">
           @endif --}}
-          {{-- @if ($resource_image)
+          @if ($resource_image)
             <img src="{{ $resource_image->temporaryUrl() }}" class="w-1/2" alt="Preview">
           @elseif ($this->resource_image_path)
             <img src="{{ Storage::disk('resource')->url($this->resource_image_path) }}" class="w-1/2" alt="Current photo">
-          @endif --}}
-          @if ($this->resource_image_path && !$resource_image)
+          @endif
+          {{-- @if ($this->resource_image_path && !$resource_image)
             <img src="{{ Storage::disk('resource')->url($this->resource_image_path) }}" class="w-1/2" alt="Current photo">
           @endif
-          <small class="text-gray-400">@if($resource_image) New image selected @endif</small>
+          <small class="text-gray-400">@if($resource_image) New image selected @endif</small> --}}
           <flux:input label="Image URL" wire:model='image' placeholder="http://example.com/image.jpg" />
           <flux:input label="Published date" wire:model='published_date' type="date" />
           <div class="flex gap-4">
