@@ -14,6 +14,7 @@ class Event extends Model
         'title',
         'event_webinar_date',
         'image',
+        'resource_image_path',
         'status',
         'register_link',
         'watch_link',

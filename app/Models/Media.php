@@ -16,6 +16,7 @@ class Media extends Model
         'type',
         'published_date',
         'link',
+        'resource_image_path',
         'image',
     ];
 }
