@@ -13,7 +13,21 @@
               <flux:select.option>Podcast</flux:select.option>
               <flux:select.option>Video</flux:select.option>
           </flux:select>
-
+          <label class="block text-sm font-medium text-white">Resource Image</label>
+          <input type="file" wire:model="resource_image" class="block w-full text-sm text-gray-500
+            file:mr-4 file:py-2 file:px-4
+            file:rounded-full file:border-0
+            file:text-sm file:font-semibold
+            file:bg-teal-50 file:text-teal-700
+            hover:file:bg-teal-100
+          "/>
+          <div wire:loading wire:target="resource_image" class="text-sm text-gray-500">Uploading...</div>
+          @error('resource_image') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
+          @if ($resource_image)
+            <img src="{{ $resource_image->temporaryUrl() }}" class="w-1/2" alt="Preview">
+          @elseif ($this->resource_image_path)
+            <img src="{{ Storage::disk('resource')->url($this->resource_image_path) }}" class="w-1/2" alt="Current photo">
+          @endif
           <flux:input label="Image URL" wire:model='image' placeholder="http://example.com/image.jpg" />
           <flux:input label="Link URL" wire:model='link' placeholder="http://example.com/link" />
           <flux:input label="Published date" wire:model='published_date' type="date" />

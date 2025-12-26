@@ -23,6 +23,10 @@ class EditMedium extends Component
 
     public $published_date;
 
+    public $resource_image;
+
+    public $resource_image_path;
+
     #[On('edit-medium')]
     public function edit($id)
     {
@@ -32,8 +36,10 @@ class EditMedium extends Component
         $this->title = $medium->title;
         $this->content = $medium->content;
         $this->image = $medium->image;
+        $this->resource_image_path = $post->resource_image_path;
         $this->link = $medium->link;
         $this->published_date = $medium->published_date;
+
         $this->type = $medium->type;
 
         Flux::modal('edit-medium')->show();
@@ -48,9 +54,19 @@ class EditMedium extends Component
             'link' => 'nullable|url',
             'type' => 'required|string|max:50',
             'published_date' => 'required|date',
+            'resource_image' => 'nullable|image|max:1024',
         ]);
 
         $medium = Media::find($this->id);
+
+        if ($this->resource_image) {
+            // Delete old image if it exists
+            if ($medium->resource_image_path) {
+                Storage::disk('resource')->delete($medium->resource_image_path);
+            }
+            $filename = time().'_'.$this->resource_image->getClientOriginalName();
+            $this->resource_image_path = $this->resource_image->storeAs('resource-images', $filename, 'resource');
+        }
 
         $medium->update([
             'title' => $this->title,

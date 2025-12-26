@@ -19,6 +19,11 @@
           "/>
           <div wire:loading wire:target="resource_image" class="text-sm text-gray-500">Uploading...</div>
           @error('resource_image') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
+          @if ($resource_image)
+            <img src="{{ $resource_image->temporaryUrl() }}" class="w-1/2" alt="Preview">
+          @elseif ($this->resource_image_path)
+            <img src="{{ Storage::disk('resource')->url($this->resource_image_path) }}" class="w-1/2" alt="Current photo">
+          @endif
           {{-- @if ($resource_image)
             <img src="#" id="preview-image" class="w-1/2" alt="Preview" style="display: none;">
             <script>
@@ -41,11 +46,6 @@
           @elseif ($this->resource_image_path)
             <img src="{{ Storage::disk('resource')->url($this->resource_image_path) }}" class="w-1/2" alt="Current photo">
           @endif --}}
-          @if ($resource_image)
-            <img src="{{ $resource_image->temporaryUrl() }}" class="w-1/2" alt="Preview">
-          @elseif ($this->resource_image_path)
-            <img src="{{ Storage::disk('resource')->url($this->resource_image_path) }}" class="w-1/2" alt="Current photo">
-          @endif
           {{-- @if ($this->resource_image_path && !$resource_image)
             <img src="{{ Storage::disk('resource')->url($this->resource_image_path) }}" class="w-1/2" alt="Current photo">
           @endif

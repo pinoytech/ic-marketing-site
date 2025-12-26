@@ -25,6 +25,10 @@ class EditEvent extends Component
 
     public $description;
 
+    public $resource_image;
+
+    public $resource_image_path;
+
     #[On('edit-event')]
     public function edit($id)
     {
@@ -34,6 +38,7 @@ class EditEvent extends Component
         $this->title = $event->title;
         $this->description = $event->description;
         $this->image = $event->image;
+        $this->resource_image_path = $post->resource_image_path;
         $this->event_webinar_date = $event->event_webinar_date;
         $this->status = $event->status;
         $this->register_link = $event->register_link;
@@ -49,9 +54,19 @@ class EditEvent extends Component
             'description' => 'required|string',
             'image' => 'nullable|url',
             'event_webinar_date' => 'required|date',
+            'resource_image' => 'nullable|image|max:1024',
         ]);
 
         $event = Event::find($this->id);
+
+        if ($this->resource_image) {
+            // Delete old image if it exists
+            if ($event->resource_image_path) {
+                Storage::disk('resource')->delete($event->resource_image_path);
+            }
+            $filename = time().'_'.$this->resource_image->getClientOriginalName();
+            $this->resource_image_path = $this->resource_image->storeAs('resource-images', $filename, 'resource');
+        }
 
         $event->update([
             'title' => $this->title,
