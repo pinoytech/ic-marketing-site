@@ -36,7 +36,7 @@ class EditMedium extends Component
         $this->title = $medium->title;
         $this->content = $medium->content;
         $this->image = $medium->image;
-        $this->resource_image_path = $post->resource_image_path;
+        $this->resource_image_path = $medium->resource_image_path;
         $this->link = $medium->link;
         $this->published_date = $medium->published_date;
 

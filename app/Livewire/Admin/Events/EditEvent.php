@@ -38,7 +38,7 @@ class EditEvent extends Component
         $this->title = $event->title;
         $this->description = $event->description;
         $this->image = $event->image;
-        $this->resource_image_path = $post->resource_image_path;
+        $this->resource_image_path = $event->resource_image_path;
         $this->event_webinar_date = $event->event_webinar_date;
         $this->status = $event->status;
         $this->register_link = $event->register_link;
