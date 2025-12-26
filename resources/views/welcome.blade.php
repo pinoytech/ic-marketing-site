@@ -300,6 +300,7 @@
         </div>
       </div>
     </div>
+    <livewire:feature-companies />
     <x-semi-footer-transform />
   </div>
 </x-layout>

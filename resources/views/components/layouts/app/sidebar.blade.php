@@ -20,17 +20,20 @@
                     <flux:navlist.item icon="sun" :href="route('admin.events')" :current="request()->routeIs('admin.events')" wire:navigate>{{ __('Events') }}</flux:navlist.item>
                     <flux:navlist.item icon="tv" :href="route('admin.media')" :current="request()->routeIs('admin.media')" wire:navigate>{{ __('Media') }}</flux:navlist.item>
                 </flux:navlist.group>
+                <flux:navlist.group :heading="__('Website Details')" class="grid">
+                    <flux:navlist.item icon="bold" :href="route('admin.companies')" :current="request()->routeIs('admin.companies')" wire:navigate>{{ __('Companies') }}</flux:navlist.item>
+                </flux:navlist.group>
             </flux:navlist>
 
             <flux:spacer />
 
             <flux:navlist variant="outline">
-                <flux:navlist.item icon="folder-git-2" href="https://github.com/laravel/livewire-starter-kit" target="_blank">
-                {{ __('Repository') }}
+                <flux:navlist.item icon="folder-git-2" href="https://infinitcare.co/" target="_blank">
+                {{ __('Marketing') }}
                 </flux:navlist.item>
 
-                <flux:navlist.item icon="book-open-text" href="https://laravel.com/docs/starter-kits#livewire" target="_blank">
-                {{ __('Documentation') }}
+                <flux:navlist.item icon="book-open-text" href="https://app.infinitcare.co/" target="_blank">
+                {{ __('Patient app') }}
                 </flux:navlist.item>
             </flux:navlist>
 

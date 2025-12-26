@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Admin\Companies\Companies;
 use App\Livewire\Admin\Events\Events;
 use App\Livewire\Admin\Media\Media;
 use App\Livewire\Admin\Posts\Posts;
@@ -50,6 +51,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('admin/posts', Posts::class)->name('admin.posts');
     Route::get('admin/events', Events::class)->name('admin.events');
     Route::get('admin/media', Media::class)->name('admin.media');
+
+    Route::get('admin/companies', Companies::class)->name('admin.companies');
 
     Route::get('settings/profile', Profile::class)->name('profile.edit');
     Route::get('settings/password', Password::class)->name('user-password.edit');
