@@ -76,6 +76,7 @@ class EditEvent extends Component
             'description' => $this->description,
             'image' => $this->image,
             'event_webinar_date' => $this->event_webinar_date,
+            'resource_image_path' => $this->resource_image_path,
         ]);
 
         Flux::modal('edit-event')->close();

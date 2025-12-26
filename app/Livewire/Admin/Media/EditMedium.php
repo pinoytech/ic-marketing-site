@@ -78,6 +78,7 @@ class EditMedium extends Component
             'type' => $this->type,
             'link' => $this->link,
             'published_date' => $this->published_date,
+            'resource_image_path' => $this->resource_image_path,
         ]);
 
         Flux::modal('edit-medium')->close();
