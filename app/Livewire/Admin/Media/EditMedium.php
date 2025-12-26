@@ -6,9 +6,12 @@ use App\Models\Media;
 use Flux\Flux;
 use Livewire\Attributes\On;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class EditMedium extends Component
 {
+    use WithFileUploads;
+
     public $id;
 
     public $title;
