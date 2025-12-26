@@ -18,4 +18,9 @@ class Post extends Model
         'published_date',
         'resource_image_path',
     ];
+
+    public function image()
+    {
+        return $this->morphOne(Image::class, 'imageable');
+    }
 }

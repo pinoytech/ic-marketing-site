@@ -19,4 +19,9 @@ class Media extends Model
         'resource_image_path',
         'image',
     ];
+
+    public function image()
+    {
+        return $this->morphOne(Image::class, 'imageable');
+    }
 }

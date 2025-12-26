@@ -22,7 +22,7 @@ class BlogsPartial extends Component
      */
     public function render(): View|Closure|string
     {
-        $posts = Post::where('published_date', '<=', now())->orderBy('published_date', 'desc')->take(3)->get();
+        $posts = Post::with('image')->where('published_date', '<=', now())->orderBy('published_date', 'desc')->take(3)->get();
 
         return view('components.blogs-partial', ['posts' => $posts]);
     }

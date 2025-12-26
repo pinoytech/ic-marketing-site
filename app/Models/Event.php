@@ -20,4 +20,9 @@ class Event extends Model
         'watch_link',
         'description',
     ];
+
+    public function image()
+    {
+        return $this->morphOne(Image::class, 'imageable');
+    }
 }

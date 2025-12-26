@@ -6,10 +6,10 @@
       @foreach($posts as $post)
         <div wire:key="post-{{ $post->id }}" class="flex flex-col gap-4 rounded-xl text-left">
           <div class="rounded-lg">
-          @if($post->resource_image_path)
-            <img src="{{ Storage::disk('resource')->url($post->resource_image_path) }}" alt="{{ $post->title }}" class="w-full max-h-[200px] object-cover rounded-lg" loading="lazy" />
+          @if($post->image)
+            <img src="{{ Storage::disk('resource')->url($post->image->path) }}" alt="{{ $post->title }}" class="w-full max-h-[200px] object-cover rounded-lg" loading="lazy" />
           @else
-            <img src="{{ $post->image }}" alt="{{ $post->title }}" class="w-full rounded-lg" loading="lazy" />
+            <img src="http://dummyimage.com/315x200/000/fff" alt="{{ $post->title }}" class="w-full rounded-lg" loading="lazy" />
           @endif
             
           </div>

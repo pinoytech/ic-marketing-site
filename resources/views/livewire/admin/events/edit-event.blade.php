@@ -10,6 +10,22 @@
           <flux:textarea label="Description" wire:model='description' placeholder="Event description" rows="4" />
           <flux:input label="Register link" wire:model='register_link' placeholder="http://example.com/register" />
           <flux:input label="Watch link" wire:model='watch_link' placeholder="http://example.com/watch" />
+          <label class="block text-sm font-medium text-white">Image</label>
+          <input type="file" wire:model="image_file" class="block w-full text-sm text-gray-500
+            file:mr-4 file:py-2 file:px-4
+            file:rounded-full file:border-0
+            file:text-sm file:font-semibold
+            file:bg-teal-50 file:text-teal-700
+            hover:file:bg-teal-100
+          "/>
+          <div wire:loading wire:target="image_file" class="text-sm text-gray-500">Uploading...</div>
+          @error('image_file') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
+          @if ($image_file)
+            <small class="text-gray-400">New image selected</small>
+            <img src="{{ $image_file->temporaryUrl() }}" class="w-1/2" alt="Preview">
+          @elseif ($image && $image->path)
+            <img src="{{ Storage::disk('resource')->url($image->path) }}" class="w-1/2" alt="Current photo">
+          @endif
           <label class="block text-sm font-medium text-white">Resource Image</label>
           <input type="file" wire:model="resource_image" class="block w-full text-sm text-gray-500
             file:mr-4 file:py-2 file:px-4

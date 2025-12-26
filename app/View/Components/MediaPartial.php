@@ -22,7 +22,7 @@ class MediaPartial extends Component
      */
     public function render(): View|Closure|string
     {
-        $media = Media::orderBy('published_date', 'desc')->take(3)->get();
+        $media = Media::with('image')->orderBy('published_date', 'desc')->take(3)->get();
 
         return view('components.media-partial', ['media' => $media]);
     }

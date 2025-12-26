@@ -18,7 +18,8 @@ class EventWebinarFull extends Component
 
     public function render()
     {
-        $events = Event::orderBy('event_webinar_date', 'desc')
+        $events = Event::with('image')
+            ->orderBy('event_webinar_date', 'desc')
             ->take($this->perPage)
             ->get();
 

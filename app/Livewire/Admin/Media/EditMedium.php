@@ -4,6 +4,7 @@ namespace App\Livewire\Admin\Media;
 
 use App\Models\Media;
 use Flux\Flux;
+use Illuminate\Support\Facades\Storage;
 use Livewire\Attributes\On;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -23,6 +24,8 @@ class EditMedium extends Component
     public $link;
 
     public $image;
+
+    public $image_file;
 
     public $published_date;
 
@@ -53,11 +56,11 @@ class EditMedium extends Component
         $this->validate([
             'title' => 'required|string|max:255',
             'content' => 'required|string',
-            'image' => 'nullable|url',
             'link' => 'nullable|url',
             'type' => 'required|string|max:50',
             'published_date' => 'required|date',
             'resource_image' => 'nullable|image|max:1024',
+            'image_file' => 'nullable|image|max:1024',
         ]);
 
         $medium = Media::find($this->id);
@@ -71,10 +74,26 @@ class EditMedium extends Component
             $this->resource_image_path = $this->resource_image->storeAs('resource-images', $filename, 'resource');
         }
 
+        if ($this->image_file) {
+            // Delete old image file from storage
+            if ($medium->image) {
+                Storage::disk('resource')->delete($medium->image->path);
+                $medium->image->delete();
+            }
+
+            // Upload new file
+            $filename = time().'_'.$this->image_file->getClientOriginalName();
+            $path = $this->image_file->storeAs('images', $filename, 'resource');
+
+            // Create new polymorphic Image record
+            $medium->image()->create([
+                'path' => $path,
+            ]);
+        }
+
         $medium->update([
             'title' => $this->title,
             'content' => $this->content,
-            'image' => $this->image,
             'type' => $this->type,
             'link' => $this->link,
             'published_date' => $this->published_date,

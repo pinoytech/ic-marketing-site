@@ -18,7 +18,8 @@ class MediaFull extends Component
 
     public function render()
     {
-        $media = Media::orderBy('published_date', 'desc')
+        $media = Media::with('image')
+            ->orderBy('published_date', 'desc')
             ->take($this->perPage)
             ->get();
 

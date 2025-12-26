@@ -18,7 +18,8 @@ class PostFull extends Component
 
     public function render()
     {
-        $posts = Post::orderBy('published_date', 'desc')
+        $posts = Post::with('image')
+            ->orderBy('published_date', 'desc')
             ->where('published_date', '<=', now())
             ->take($this->perPage)
             ->get();
