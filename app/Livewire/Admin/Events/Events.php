@@ -35,6 +35,11 @@ class Events extends Component
 
     public function deleteEvent()
     {
+        // Delete image if it exists
+        $event = Event::find($this->id);
+        if ($event && $event->resource_image_path) {
+            Storage::disk('resource')->delete($event->resource_image_path);
+        }
         Event::destroy($this->id);
         Flux::modal('delete-event')->close();
         session()->flash('message', 'Event deleted successfully.');

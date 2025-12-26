@@ -35,6 +35,11 @@ class Posts extends Component
 
     public function deletePost()
     {
+        // Delete image if it exists
+        $post = Post::find($this->id);
+        if ($post && $post->resource_image_path) {
+            Storage::disk('resource')->delete($post->resource_image_path);
+        }
         Post::destroy($this->id);
         Flux::modal('delete-post')->close();
         session()->flash('message', 'Post deleted successfully.');

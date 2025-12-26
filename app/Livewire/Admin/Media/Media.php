@@ -35,6 +35,11 @@ class Media extends Component
 
     public function deleteMedium()
     {
+        // Delete image if it exists
+        $medium = MediaModel::find($this->id);
+        if ($medium && $medium->resource_image_path) {
+            Storage::disk('resource')->delete($medium->resource_image_path);
+        }
         MediaModel::destroy($this->id);
         Flux::modal('delete-medium')->close();
         session()->flash('message', 'Medium deleted successfully.');
