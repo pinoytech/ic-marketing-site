@@ -22,8 +22,7 @@ class EventWebinarPartial extends Component
      */
     public function render(): View|Closure|string
     {
-        $events = Event::where('event_webinar_date', '>=', now())
-            ->orderBy('event_webinar_date', 'desc')
+        $events = Event::orderBy('event_webinar_date', 'desc')
             ->take(3)
             ->get();
 
