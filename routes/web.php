@@ -23,6 +23,10 @@ Route::get('/resources', function () {
     return view('resources.index');
 })->name('resources');
 
+Route::get('/privacy-policy', function () {
+    return view('privacy-policy');
+})->name('privacy-policy');
+
 Route::group(['prefix' => 'resources'], function () {
     Route::get('/', function () {
         return view('resources.index');
