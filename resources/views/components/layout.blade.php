@@ -18,7 +18,7 @@
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="h-dvh bg-black-100 w-full">
-  <nav class="bg-white shadow-md">
+  <nav class="bg-white shadow-md sticky top-0 z-50 w-full">
     <div class="max-w-screen-xl mx-auto">
       <div class="flex items-center justify-between h-16">
         <!-- Mobile hamburger (left) -->
