@@ -49,7 +49,7 @@ class EditCompany extends Component
         $this->validate([
             'name' => 'required|string|max:255',
             'logo_path' => 'nullable|string|max:255',
-            'display_order' => 'required|integer',
+            'display_order' => 'nullable|integer',
             'featured' => 'required|boolean',
         ]);
 

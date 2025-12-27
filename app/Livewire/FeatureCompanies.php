@@ -14,11 +14,11 @@ class FeatureCompanies extends Component
     public function mount()
     {
         $this->featuredCompanies = Company::where('featured', true)
-            ->orderBy('display_order')
+            ->orderByRaw('display_order IS NULL, display_order ASC')
             ->get();
 
         $this->nonFeaturedCompanies = Company::where('featured', false)
-            ->orderBy('display_order')
+            ->orderByRaw('display_order IS NULL, display_order ASC')
             ->get();
     }
 
