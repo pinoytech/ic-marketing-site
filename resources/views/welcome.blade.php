@@ -212,9 +212,10 @@
       </div>
       <!-- Be guided at every step -->
       <div class="w-full bg-white h-auto mb-8">
-        <div class="flex flex-col mx-auto gap-8 my-auto max-w-screen-xl xl:px-0 px-8 md:px-0 lg:px-8">
-          <h3 class="text-xl md:text-3xl font-semibold">Be guided at every step in building your employee well-being program:</h3>
-          <ul class="flex flex-wrap flex-col md:flex-row items-stretch mx-auto gap-4 my-auto max-w-screen-xl px-0">
+        <div class="relative flex flex-col mx-auto gap-8 my-auto max-w-screen-xl xl:px-0 px-8 pb-10 md:px-0 lg:px-8">
+          <img src="/images/bg-pixels.png" alt="pixels" class="hidden md:block z-10 absolute mx-auto mt-8 repeat-none bottom-0 right-[-9px]"/>
+          <h3 class="text-xl md:text-3xl font-semibold w-1/2">Be guided at every step in building your employee well-being program:</h3>
+          <ul class="z-10 flex flex-wrap flex-col md:flex-row items-stretch mx-auto gap-4 my-auto max-w-screen-xl px-0">
             <li class="flex flex-row md:flex-col flex-row-reverse items-start justify-between flex-1 min-w-[160px] md:min-h-[244px] h-full bg-white rounded-lg border border-gray-200 p-4 gap-2 text-left hover:shadow-sm transition">
               <div class="flex md:flex-col flex-row-reverse gap-4 w-full">
                 <svg class="w-12 h-12" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
