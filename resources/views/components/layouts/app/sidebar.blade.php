@@ -22,6 +22,7 @@
                 </flux:navlist.group>
                 <flux:navlist.group :heading="__('Website Details')" class="grid">
                     <flux:navlist.item icon="bold" :href="route('admin.companies')" :current="request()->routeIs('admin.companies')" wire:navigate>{{ __('Companies') }}</flux:navlist.item>
+                    <flux:navlist.item icon="user-circle" :href="route('admin.team-members')" :current="request()->routeIs('admin.team-members')" wire:navigate>{{ __('Team Members') }}</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 

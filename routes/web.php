@@ -4,6 +4,7 @@ use App\Livewire\Admin\Companies\Companies;
 use App\Livewire\Admin\Events\Events;
 use App\Livewire\Admin\Media\Media;
 use App\Livewire\Admin\Posts\Posts;
+use App\Livewire\Admin\TeamMembers\TeamMembers;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
@@ -57,6 +58,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('admin/media', Media::class)->name('admin.media');
 
     Route::get('admin/companies', Companies::class)->name('admin.companies');
+    Route::get('admin/team-members', TeamMembers::class)->name('admin.team-members');
 
     Route::get('settings/profile', Profile::class)->name('profile.edit');
     Route::get('settings/password', Password::class)->name('user-password.edit');
