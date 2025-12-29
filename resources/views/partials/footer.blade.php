@@ -47,7 +47,7 @@
         <div>
           <ul class="flex flex-col gap-2">
             <li class="text-md font-semibold"><a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
-            <li class="text-md font-semibold">Terms &amp; Conditions</li>
+            <li class="text-md font-semibold"><a href="{{ route('terms') }}">Terms &amp; Conditions</a></li>
             <li class="text-md font-semibold">BIR Certification</li>
           </ul>
         </div>
