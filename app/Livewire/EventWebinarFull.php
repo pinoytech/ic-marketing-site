@@ -7,28 +7,48 @@ use Livewire\Component;
 
 class EventWebinarFull extends Component
 {
+    public $events = [];
+
     public $perPage = 9;
+
+    public $offset = 0;
 
     public $hasMore = true;
 
-    public function loadMore()
+    public function mount()
     {
-        $this->perPage += 9;
+        $this->loadInitial();
     }
 
-    public function render()
+    public function loadInitial()
     {
-        $events = Event::with('image')
+        $this->events = Event::with('image')
             ->orderBy('event_webinar_date', 'desc')
             ->take($this->perPage)
             ->get();
 
+        $this->offset = $this->events->count();
         $totalEvents = Event::count();
-        $this->hasMore = $events->count() < $totalEvents;
+        $this->hasMore = $this->offset < $totalEvents;
+    }
 
-        return view('livewire.event-webinar-full', [
-            'events' => $events,
-            'hasMore' => $this->hasMore,
-        ]);
+    public function loadMore()
+    {
+        $newEvents = Event::with('image')
+            ->orderBy('event_webinar_date', 'desc')
+            ->skip($this->offset)
+            ->take($this->perPage)
+            ->get();
+
+        $this->events = $this->events->concat($newEvents);
+        $this->offset += $newEvents->count();
+
+        $totalEvents = Event::count();
+        $this->hasMore = $this->offset < $totalEvents;
+    }
+
+    public function render()
+    {
+        return view('livewire.event-webinar-full');
     }
 }
