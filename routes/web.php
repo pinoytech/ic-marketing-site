@@ -12,39 +12,52 @@ use App\Livewire\Settings\TwoFactor;
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Features;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
-
-Route::get('/about-us', function () {
-    return view('about-us');
-})->name('about-us');
-
-Route::get('/resources', function () {
-    return view('resources.index');
-})->name('resources');
-
-Route::get('/privacy-policy', function () {
-    return view('privacy-policy');
-})->name('privacy-policy');
-
-Route::get('/terms', function () {
-    return view('terms');
-})->name('terms');
-
-Route::group(['prefix' => 'resources'], function () {
-    Route::get('/', function () {
-        return view('resources.index');
-    })->name('resources.index');
-    Route::get('/events-webinar', function () {
+Route::middleware('cache.headers:public;max_age=3600;etag')->group(function () {
+    Route::get('/resources/events-webinar', function () {
         return view('resources.events-webinar');
     })->name('resources.events-webinar');
-    Route::get('/posts', function () {
+
+    Route::get('/resources/posts', function () {
         return view('resources.posts');
     })->name('resources.posts');
-    Route::get('/media', function () {
+
+    Route::get('/resources/media', function () {
         return view('resources.media');
     })->name('resources.media');
+    Route::get('/', function () {
+        return view('welcome');
+    })->name('home');
+
+    Route::get('/about-us', function () {
+        return view('about-us');
+    })->name('about-us');
+
+    Route::get('/resources', function () {
+        return view('resources.index');
+    })->name('resources');
+
+    Route::get('/privacy-policy', function () {
+        return view('privacy-policy');
+    })->name('privacy-policy');
+
+    Route::get('/terms', function () {
+        return view('terms');
+    })->name('terms');
+
+    Route::group(['prefix' => 'resources'], function () {
+        Route::get('/', function () {
+            return view('resources.index');
+        })->name('resources.index');
+        Route::get('/events-webinar', function () {
+            return view('resources.events-webinar');
+        })->name('resources.events-webinar');
+        Route::get('/posts', function () {
+            return view('resources.posts');
+        })->name('resources.posts');
+        Route::get('/media', function () {
+            return view('resources.media');
+        })->name('resources.media');
+    });
 });
 
 Route::get('/booking', function () {
