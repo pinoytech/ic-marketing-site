@@ -1,5 +1,5 @@
 
-<x-layout title='Mental Healthcare for your Workforce'>
+<x-layout title='Privacy Policy'>
   <div class="md:bg-transparent bg-icgreen-light flex flex-col gap-12 justify-between items-center w-11/12 md:w-3/5 lg:w-full mx-auto">
     <div class="w-full max-w-screen-xl mx-auto py-8 flex flex-col justify-between gap-8 text-sm [&_ul]:list-disc [&_ul]:ml-6 [&_ol]:list-decimal [&_ol]:ml-6">
       <h1 class="mb-3 text-2xl">Infinit Care Privacy Policy</h1>

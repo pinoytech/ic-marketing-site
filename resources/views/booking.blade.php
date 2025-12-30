@@ -1,4 +1,4 @@
-<x-layout title='About us'>
+<x-layout title='Booking a Discovery Call'>
   <div class="md:bg-transparent bg-icgreen-light flex flex-col gap-12 justify-between items-center w-full">
     <div class="w-full max-w-screen-xl mx-auto py-8 flex flex-col justify-between gap-2">
       <div class="bg-yellow-200 p-4 rounded-lg flex flex-col gap-4 w-11/12 md:w-3/5 lg:w-4/5 mx-auto">

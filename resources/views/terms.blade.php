@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Terms and Conditions">
   <div class="md:bg-transparent bg-icgreen-light flex flex-col gap-12 justify-between items-center w-11/12 md:w-3/5 lg:w-full mx-auto">
     <div class="w-full max-w-screen-xl mx-auto py-8 flex flex-col justify-between gap-8 text-sm [&_ul]:list-disc [&_ul]:ml-6 [&_ol]:list-decimal [&_ol]:ml-6">
 
