@@ -23,9 +23,9 @@
           <div class="text-sm font-semibold">{{ $event->title }}</div>
           <div class="text-teal-500 text-xs">
             @if(\Carbon\Carbon::parse($event->event_webinar_date)->isFuture() && $event->register_link)
-              <a href="{{ $event->register_link }}" class="hover:underline">Register</a>
+              <a href="{{ $event->register_link }}" class="text-teal-500 text-xs font-semibold hover:underline">Register</a>
             @elseif(\Carbon\Carbon::parse($event->event_webinar_date)->isPast() && $event->watch_link)
-              <a href="{{ $event->watch_link }}" class="hover:underline">Watch Recording</a>
+              <a href="{{ $event->watch_link }}" class="text-teal-500 text-xs font-semibold hover:underline">Watch Recording</a>
             @endif
           </div>
         </div>

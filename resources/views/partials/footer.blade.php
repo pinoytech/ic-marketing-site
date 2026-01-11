@@ -1,5 +1,5 @@
-<footer class="bg-gray-50 mt-8 flex items-center justify-center flex-col w-full">
-  <div class="w-full flex items-center h-auto mb-8 px-8 md:px-0 lg:px-8">
+<footer class="bg-gray-50 flex items-center justify-center flex-col w-full md:px-96 px-0">
+  <div class="w-full flex items-center h-auto mb-8 px-0 md:px-0 lg:px-8">
     <div class="w-full max-w-screen-xl mx-auto py-8 flex flex-col justify-between gap-2">
       <div class="self-start mb-8">
         <svg width="200" height="65" viewBox="0 0 200 65" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

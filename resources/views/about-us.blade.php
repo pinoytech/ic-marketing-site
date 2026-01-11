@@ -1,6 +1,6 @@
 <x-layout title='About us'>
   <div class="flex flex-col gap-6 justify-between items-center w-full">
-    <div class="relative flex bg-teal-700 md:h-[400px] h-[500px] flex-col gap-12 my-auto justify-center items-center w-full">
+    <div class="relative flex bg-teal-700 md:h-[400px] h-[500px] flex-col gap-12 my-auto justify-center items-center w-full md:px-96 px-0 overflow-hidden">
       <!-- Desktop background (left, vertical repeat) -->
       <div class="hidden md:block absolute inset-0 z-0 pointer-events-none bg-top md:bg-left bg-auto bg-repeat-y" style="background-image: url('/images/side-pixel-bg.png'); background-position: top left;"></div>
 
@@ -13,7 +13,7 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-col gap-8 my-auto justify-center items-center w-full">
+    <div class="flex flex-col gap-8 my-auto justify-center items-center w-full md:px-96 px-0">
       <div class="w-full max-w-screen-xl mx-auto flex flex-col">
         <div class="flex gap-6 md:flex-row flex-col w-full mx-auto px-4 md:px-0">
           <div class="md:w-3/10 w-full md:flex justify-center items-center">
@@ -57,8 +57,8 @@
         <div class="w-full max-w-screen-xl mx-auto py-8 flex flex-col gap-8 px-4 md:px-0">
           <h4 class='text-md font-semibold'>Uniquely, Infinite Care offers support at all points on the continuum:</h4>
           <div class="flex flex-col gap-8 justify-center items-center w-full hidden md:block">
-            <img src='/images/meter.png' alt="Mental Health Continuum Graphic" class='mx-auto'/>
-            <img src='/images/interventions.png' alt="Mental Health Continuum Graphic" class='mx-auto'/>
+            <img src='/images/meter.png' alt="Mental Health Continuum Graphic"/>
+            <img src='/images/interventions.png' alt="Mental Health Continuum Graphic"/>
           </div>
           <div class="flex flex-col gap-8 justify-center items-center w-full md:hidden block">
             <img src='/images/mobile-meter.png' alt="Mental Health Continuum Graphic"/>

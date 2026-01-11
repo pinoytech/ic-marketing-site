@@ -24,7 +24,7 @@
           <span class='uppercase text-gray-500'>{{ \Carbon\Carbon::parse($post->published_date)->format('F j, Y') }}</span>
         </div>
         <div class="text-sm font-semibold">{{ $post->title }}</div>
-        <div class="text-teal-500 text-xs"><a href='#'>Read more</a></div>
+        <div class="text-teal-500 text-xs font-semibold hover:underline"><a href='#'>Read more</a></div>
       </div>
     @endforeach
   </div>

@@ -10,7 +10,7 @@
     </div>
   @endsession('success')
 
-  <div class="bg-white md:p-12 p-4 rounded-lg shadow-md border-1 border-gray-100 md:w-3/4 lg:w-3/5">
+  <div class="bg-white md:p-12 p-4 rounded-lg shadow-md border-1 border-gray-100">
     <form wire:submit.prevent="submit" class="flex flex-col gap-6">
       <div class="flex flex-col">
         <label for="name" class="mb-2 font-medium text-sm">Full Name</label>

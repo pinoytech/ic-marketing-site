@@ -23,7 +23,7 @@
           </div>
           <div class="text-sm font-semibold">{{ $post->title }}</div>
           <div class="text-teal-500 text-xs">
-            <a href="/post/{{ $post->id }}" class="hover:underline">Read more</a>
+            <a href="/post/{{ $post->id }}" class="text-teal-500 text-xs font-semibold hover:underline">Read more</a>
           </div>
         </div>
       @endforeach

@@ -20,7 +20,7 @@
           <span class='uppercase text-gray-500'>{{ $med['date'] }}</span>
         </div>
         <div class="text-sm font-semibold">{{ $med['title'] }}</div>
-        <div class="text-teal-500 text-xs"><a href='{{ $med['link'] }}' target="_blank">Read more</a></div>
+        <div class="text-teal-500 text-xs font-semibold hover:underline"><a href='{{ $med['link'] }}' target="_blank">Read more</a></div>
       </div>
     @endforeach
   </div>

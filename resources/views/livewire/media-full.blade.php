@@ -17,7 +17,7 @@
           </div>
           <div class="text-sm font-semibold">{{ $medium->title }}</div>
           <div class="text-teal-500 text-xs">
-              <a href="{{ $medium->link }}" target="_blank" rel="noopener noreferrer" class="hover:underline">Read more</a>
+              <a href="{{ $medium->link }}" target="_blank" rel="noopener noreferrer" class="text-teal-500 text-xs font-semibold hover:underline">Read more</a>
           </div>
         </div>
       @endforeach

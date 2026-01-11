@@ -16,10 +16,10 @@
   <div class="flex flex-col gap-12 justify-between items-center w-full">
     <!-- Hero Section  -->
     <!-- Hero Section: full-viewport and vertically centered -->
-    <div class="w-full bg-teal-700 flex items-center overflow-hidden md:px-96" style="min-height: calc(100vh - var(--site-header-height, 64px));">
+    <div class="w-full bg-teal-700 flex items-center overflow-hidden md:px-96 px-0" style="min-height: calc(100vh - var(--site-header-height, 64px));">
       <div class="flex space-x-4 max-w-screen-xl mx-auto py-0 w-full xl:px-0 lg:px-8 px-8 md:px-0 items-center">
-        <div class="w-full md:w-1/2 p-8 flex flex-col space-y-6 justify-center text-center md:text-left">
-          <h3 class="text-4xl text-white">Build a thriving workforce with holistic employee well-being programs beyond HMO</h3>
+        <div class="w-full md:w-1/2 p-8 flex flex-col space-y-6 gap-0 md:gap-8 justify-center text-center md:text-left">
+          <h3 class="md:text-[40px] text-[32px] leading-tight text-white">Build a thriving workforce with holistic employee well-being programs beyond HMOs</h3>
           <div class="flex flex-col items-center w-64 relative text-center mx-auto md:mx-0">
             <a href="{{ route('booking') }}">
               <button class="cursor-pointer h-12 font-semibold text-sm w-64 bg-white border-transparent rounded-lg px-4 py-2 text-teal-500">Book a Discovery Call</button>
@@ -27,7 +27,13 @@
             <div class="md:flex md:items-center md:justify-center z-10 h-50 md:h-auto md:w-1/2 pt-8 md:hidden">
               <img src="/images/hero-header-for-workforce-culture.png" alt="hero header image" class="w-auto object-contain"/>
             </div>
-            <img src="/images/pixels.png" alt="pixels" class="absolute top-full z-10"/>
+            <div class="absolute top-full z-9 pointer-events-none select-none"
+                style="background-image: url('/images/pixels.png');
+                        width: 220px;
+                        height: 1000px;
+                        background-repeat: repeat-y;
+                        background-position: center top;">
+            </div>
           </div>
         </div>
 
@@ -38,7 +44,7 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-col gap-12 md:gap-48 justify-between items-center w-full">
+    <div class="flex flex-col gap-12 md:gap-48 justify-between items-center w-full md:px-96 px-0">
       <!-- Features Section 1 -->
       <div class="w-full bg-white h-auto">
         <div class="flex mx-auto md:flex-row flex-col-reverse flex-col px-8 md:px-0 lg:px-8 gap-4 my-auto max-w-screen-xl">
@@ -221,7 +227,7 @@
         <div class="relative flex flex-col mx-auto gap-8 my-auto max-w-screen-xl xl:px-0 px-8 pb-10 md:px-0 lg:px-8">
           <img src="/images/bg-pixels.png" alt="pixels" class="hidden md:block z-10 absolute mx-auto mt-8 repeat-none bottom-0 right-[-9px]"/>
           <h3 class="text-xl md:text-3xl font-semibold w-1/2">Be guided at every step in building your employee well-being program:</h3>
-          <ul class="z-10 flex flex-wrap flex-col md:flex-row items-stretch mx-auto gap-4 my-auto max-w-screen-xl px-0">
+          <ul class="z-10 flex flex-wrap flex-col md:flex-row items-stretch mx-auto gap-4 my-auto max-w-screen-xl px-0 md:px-8 lg:px-8">
             <li class="flex flex-row md:flex-col flex-row-reverse items-start justify-between flex-1 min-w-[160px] md:min-h-[244px] h-full bg-white rounded-lg border border-gray-200 p-4 gap-2 text-left hover:shadow-sm transition">
               <div class="flex md:flex-col flex-row-reverse gap-4 w-full">
                 <svg class="w-12 h-12" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -295,7 +301,7 @@
         </div>
       </div>
     </div>
-    <div class="w-full bg-white h-72 md:h-auto">
+    <div class="w-full bg-white h-72 md:h-auto md:px-96 px-0">
       <div class="flex items-center mx-auto flex-col gap-4 my-auto max-w-screen-xl xl:px-0 px-8 md:px-0 lg:px-8 h-full">
         <div style="background-image: url('/images/custom-background.png');" class="flex gap-8 md:gap-12 items-center justify-center bg-gray-50 bg-[url('/images/custom-background.png')] bg-center rounded-lg overflow-clip flex-col my-auto relative md:w-[800px]:h-52 lg:w-full h-72 px-8">
           <h3 class="text-3xl font-semibold text-center">Want custom programs &amp; services? No problem!</h3>
