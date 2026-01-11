@@ -14,7 +14,7 @@
     <form wire:submit.prevent="submit" class="flex flex-col gap-6">
       <div class="flex flex-col">
         <label for="name" class="mb-2 font-medium text-sm">Full Name</label>
-        <input type="text" id="name" name="name" wire:model="name" class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"/>
+        <input type="text" id="name" name="name" wire:model="name" required class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"/>
         @error('name') <span class="text-red-600 text-sm mt-1">{{ $message }}</span> @enderror
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
