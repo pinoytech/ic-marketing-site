@@ -1,4 +1,4 @@
-<div class="flex flex-col gap-4 items-center justify-center">
+<div class="flex flex-col gap-4 justify-center">
   @session('success')
     <div
         x-data="{show: true}"

@@ -1,4 +1,4 @@
-<footer class="bg-gray-50 flex items-center justify-center flex-col w-full md:px-96 px-0">
+<footer class="bg-gray-50 flex items-center justify-center flex-col w-full md:px-96 px-4">
   <div class="w-full flex items-center h-auto mb-8 px-0 md:px-0 lg:px-8">
     <div class="w-full max-w-screen-xl mx-auto py-8 flex flex-col justify-between gap-2">
       <div class="self-start mb-8">
