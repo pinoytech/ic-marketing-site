@@ -182,7 +182,7 @@
               </svg>
             </div>
           </div>
-          <div class="text-sm text-gray-500 mt-4 flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+          <div class="text-sm text-gray-500 mt-4 flex flex-col md:flex-row md:justify-left md:items-center gap-2">
             <div>&copy; Copyright Infinit Care <span id="current-year">2025</span>.</div>
             <div>All Rights Reserved.</div>
           </div>
