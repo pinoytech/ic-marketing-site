@@ -1,4 +1,4 @@
-<div class="flex flex-col gap-4 items-center justify-center">
+<div class="flex flex-col gap-4 justify-center">
   @session('success')
     <div
         x-data="{show: true}"
@@ -10,11 +10,11 @@
     </div>
   @endsession('success')
 
-  <div class="bg-white md:p-12 p-4 rounded-lg shadow-md border-1 border-gray-100 md:w-3/4 lg:w-3/5">
+  <div class="bg-white md:p-12 p-4 rounded-lg shadow-md border-1 border-gray-100">
     <form wire:submit.prevent="submit" class="flex flex-col gap-6">
       <div class="flex flex-col">
         <label for="name" class="mb-2 font-medium text-sm">Full Name</label>
-        <input type="text" id="name" name="name" wire:model="name" class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"/>
+        <input type="text" id="name" name="name" wire:model="name" required class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"/>
         @error('name') <span class="text-red-600 text-sm mt-1">{{ $message }}</span> @enderror
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">

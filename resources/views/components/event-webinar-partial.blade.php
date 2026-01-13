@@ -24,7 +24,7 @@
           <span class='uppercase text-gray-500'>{{ $event->event_webinar_date }}</span>
         </div>
         <div class="text-sm font-semibold">{{ $event->title }}</div>
-        <div class="text-teal-500 text-xs"><a href='#'>Register</a></div>
+        <div class="text-teal-500 text-xs font-semibold hover:underline"><a href='#'>Register</a></div>
       </div>
     @endforeach
   </div>

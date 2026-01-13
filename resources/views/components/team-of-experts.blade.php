@@ -1,4 +1,4 @@
-<div class="flex flex-col md:gap-8 justify-between items-center w-full gap-0">
+<div class="flex flex-col md:gap-8 justify-between items-center w-full gap-0 md:px-96 px-0">
   <div class="w-full max-w-screen-xl mx-auto py-4 md:py-2text-left h-full px-4 md:px-0">
     <h3 class="text-lg md:text-3xl text-black-900 font-semibold">Meet our team of experts</h3>
   </div>
