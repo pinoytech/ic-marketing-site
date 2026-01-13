@@ -52,7 +52,7 @@
           </ul>
         </div>
       </div>
-      <div><hr class="my-12 h-0.5 border-t-0 bg-neutral-200 dark:bg-white/10" /></div>
+      <div><hr class="my-4 mb-10 h-0.5 border-t-0 bg-neutral-200 dark:bg-white/10" /></div>
       <div class="flex justify-between md:flex-row flex-col gap-4 md:gap-0">
         <div class="flex flex-col gap-4">
           <div class="flex md:flex-row flex-col gap-4">

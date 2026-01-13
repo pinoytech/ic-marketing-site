@@ -8,7 +8,7 @@
       <div class="block md:hidden absolute inset-x-0 top-0 z-0 pointer-events-none bg-top bg-no-repeat h-12" style="background-image: url('/images/top-pixel-bg.png'); background-position: top center; background-size: auto;"></div>
       <div class="relative z-10 w-full max-w-screen-xl mx-auto py-8 flex flex-col">
         <div class="flex flex-col gap-6 w-4/5 mx-auto text-center">
-          <h2 class="text-4xl text-white">Workplace well-being is a standard, not a perk</h2>
+          <h2 class="text-[40px] text-white">Workplace well-being is a standard, not a perk</h2>
           <p class="text-white">Infinit Care helps companies improve employee engagement and productivity through holistic interventions. When well-being becomes part of your culture, people and performance thrive together.</p>
         </div>
       </div>
