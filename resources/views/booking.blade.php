@@ -3,7 +3,7 @@
     <div class="max-w-screen-xl mx-auto py-8 flex flex-col justify-between gap-2 md:w-4/9 w-full px-4 md:px-0">
       <div class="bg-yellow-200 p-4 rounded-lg gap-4 mx-auto">
         <p class="font-semibold">This form is for business inquiries only</p>
-        <p>For member or employee support, please call +63 917 899 (USAP) or 989 8727 (USAP). For member inquiries, please reach out to <span>info@infinitcare.co</span></p>
+        <p>For member or employee support, please call <span class="font-semibold">+63 917 899 8727</span> (USAP) or <span class="font-semibold">989 8727</span> (USAP). For member inquiries, please reach out to <a class="text-teal hover:underline font-semibold" href="mailto:info@infinitcare.co">info@infinitcare.co</a></p>
       </div>
     </div>
   </div>
