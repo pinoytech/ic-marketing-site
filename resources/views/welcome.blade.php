@@ -16,7 +16,7 @@
   <div class="flex flex-col gap-12 justify-between items-center w-full">
     <!-- Hero Section  -->
     <!-- Hero Section: full-viewport and vertically centered -->
-    <div class="w-full bg-teal-700 flex items-center overflow-hidden md:px-96 px-0" style="min-height: calc(100vh - var(--site-header-height, 64px));">
+    <div class="w-full bg-teal-700 flex items-center overflow-hidden lg:px-96 sm:px-4 px-0" style="min-height: calc(100vh - var(--site-header-height, 64px));">
       <div class="flex space-x-4 max-w-screen-xl mx-auto py-0 w-full xl:px-0 lg:px-8 px-8 md:px-0 items-center">
         <div class="w-full md:w-1/2 p-8 flex flex-col space-y-6 gap-0 md:gap-8 justify-center text-center md:text-left">
           <h3 class="md:text-[40px] text-[32px] leading-tight text-white">Build a thriving workforce with holistic employee well-being programs beyond HMOs</h3>
@@ -44,7 +44,7 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-col gap-12 md:gap-48 justify-between items-center w-full md:px-96 px-0">
+    <div class="flex flex-col gap-12 md:gap-48 justify-between items-center w-full lg:px-96 sm:px-4 px-0">
       <!-- Features Section 1 -->
       <div class="w-full bg-white h-auto">
         <div class="flex mx-auto md:flex-row flex-col-reverse flex-col px-8 md:px-0 lg:px-8 gap-4 my-auto max-w-screen-xl">
@@ -301,7 +301,7 @@
         </div>
       </div>
     </div>
-    <div class="w-full bg-white h-72 md:h-auto md:px-96 px-0">
+    <div class="w-full bg-white h-72 md:h-auto sm:px-96 md:px-0 px-0">
       <div class="flex items-center mx-auto flex-col gap-4 my-auto max-w-screen-xl xl:px-0 px-8 md:px-0 lg:px-8 h-full">
         <div style="background-image: url('/images/custom-background.png');" class="flex gap-8 md:gap-12 items-center justify-center bg-gray-50 bg-[url('/images/custom-background.png')] bg-center rounded-lg overflow-clip flex-col my-auto relative md:w-[800px]:h-52 lg:w-full h-72 px-8">
           <h3 class="text-3xl font-semibold text-center">Want custom programs &amp; services? No problem!</h3>

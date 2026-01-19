@@ -1,4 +1,4 @@
-<div class="w-full bg-white h-72 md:h-auto md:px-96 px-0">
+<div class="w-full bg-white h-72 md:h-auto sm:px-0 lg:px-96 px-0">
   <div class="w-full max-w-screen-xl mx-auto px-4 md:px-0 flex flex-row justify-center items-center flex-wrap">
     <div class="flex flex-row gap-4 justify-center items-center w-full py-4">
       <h2 class="text-3xl font-semibold text-center">Trusted by over 100 companies of all sizes</h2>
