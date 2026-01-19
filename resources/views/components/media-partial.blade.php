@@ -2,7 +2,7 @@
   <div class="w-full max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col">
     <div class="flex flex-row gap-4 justify-start items-center">
       <h2 class="text-2xl font-semibold text-center">Media</h2>
-      <a href="{{ route('resources.media') }}" class="text-xs text-teal-500 font-semibold hover:underline">See all &rarr;</a>
+      <a href="{{ route('resources.media') }}" class="text-[14px] text-teal-500 font-semibold hover:underline">See all &rarr;</a>
     </div>
   </div>
   <div class="w-full max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col md:flex-row gap-8">
@@ -20,7 +20,7 @@
           <span class='uppercase text-gray-500'>{{ $med['date'] }}</span>
         </div>
         <div class="text-sm font-semibold">{{ $med['title'] }}</div>
-        <div class="text-teal-500 text-xs font-semibold hover:underline"><a href='{{ $med['link'] }}' target="_blank">Read more</a></div>
+        <div class="text-teal-500 text-[14px] font-semibold hover:underline"><a href='{{ $med['link'] }}' target="_blank">Read more</a></div>
       </div>
     @endforeach
   </div>
