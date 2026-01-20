@@ -1,11 +1,11 @@
 <div class="flex flex-col gap-4 my-auto justify-center items-center w-full mb-8">
-  <div class="w-full max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col">
+  <div class="w-full max-w-screen-xl mx-auto px-4 lg:px-0 sm:px-4 flex flex-col">
     <div class="flex flex-row gap-4 justify-start items-center">
       <h2 class="text-2xl font-semibold text-center">Blogs</h2>
       <a href="{{ route('resources.posts') }}" class="text-[14px] text-teal-500 font-semibold hover:underline">See all &rarr;</a>
     </div>
   </div>
-  <div class="w-full max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col md:flex-row gap-8">
+  <div class="w-full max-w-screen-xl mx-auto px-4 lg:px-0 sm:px-4 flex flex-col md:flex-row gap-8">
     @foreach ($posts as $post)
       <div wire:key="post-{{ $post->id }}" class="flex flex-col gap-4 w-full md:w-1/3 mx-auto rounded-xl text-left">
         <div class="rounded-lg bg-gray-500">
