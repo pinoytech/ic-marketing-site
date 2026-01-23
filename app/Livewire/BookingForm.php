@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Jobs\SendContactFormEmail;
 use Livewire\Component;
 
 class BookingForm extends Component
@@ -37,6 +38,9 @@ class BookingForm extends Component
         ]);
 
         // Add logic to store the data or send an email here
+
+        // $contactFormEmail = new SendContactFormEmail()->handle();
+        SendContactFormEmail::dispatch();
 
         session()->flash('success', 'Your booking request has been submitted successfully!');
 
