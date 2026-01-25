@@ -16,9 +16,9 @@ class BookingFormSubmitted extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct($data)
     {
-        //
+        $this->data = $data;
     }
 
     /**
@@ -40,6 +40,16 @@ class BookingFormSubmitted extends Mailable
     {
         return new Content(
             view: 'mail.booking-form-submitted',
+            with: [
+                'fullName' => $this->data['name'],
+                'mobileNumber' => $this->data['mobile'],
+                'emailAddress' => $this->data['email'],
+                'companyName' => $this->data['company'],
+                'position' => $this->data['position'],
+                'numberOfEmployees' => $this->data['employees'],
+                'referralSource' => $this->data['referral'],
+                'additionalMessage' => $this->data['message'],
+            ],
         );
     }
 

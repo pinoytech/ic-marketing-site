@@ -16,12 +16,14 @@ class SendContactFormEmail implements ShouldQueue
     // public $backoff = 2;
     public $backoff = [2, 3];
 
+    public $data;
+
     /**
      * Create a new job instance.
      */
-    public function __construct()
+    public function __construct($data)
     {
-        //
+        $this->data = $data;
     }
 
     /**
@@ -29,7 +31,7 @@ class SendContactFormEmail implements ShouldQueue
      */
     public function handle(): void
     {
-        Mail::send(new BookingFormSubmitted);
+        Mail::send(new BookingFormSubmitted($this->data));
         // sleep(3);
         // echo 'Hello!';
     }

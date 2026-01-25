@@ -40,7 +40,7 @@ class BookingForm extends Component
         // Add logic to store the data or send an email here
 
         // $contactFormEmail = new SendContactFormEmail()->handle();
-        SendContactFormEmail::dispatch();
+        SendContactFormEmail::dispatch($this->all());
 
         session()->flash('success', 'Your booking request has been submitted successfully!');
 
