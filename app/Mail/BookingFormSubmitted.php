@@ -40,6 +40,7 @@ class BookingFormSubmitted extends Mailable
     {
         return new Content(
             view: 'mail.booking-form-submitted',
+            text: 'mail.booking-form-submitted-text',
             with: [
                 'fullName' => $this->data['name'],
                 'mobileNumber' => $this->data['mobile'],
